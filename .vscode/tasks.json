@@ -1,0 +1,67 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "RN: Build Release Apps",
+            "type": "shell",
+            "command": "cd android && gradlew assembleRelease && cd ..",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "RN: Run packager + Reverse",
+            "type": "shell",
+            "command": "adb reverse tcp:8081 tcp:8081 && react-native start",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "RN: Run packager Only",
+            "type": "shell",
+            "command": "react-native start",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "RN: Reverse Port Only",
+            "type": "shell",
+            "command": "adb reverse tcp:8081 tcp:8081 && react-native start",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "RN: Run packager + Reverse + Build Debug [A]",
+            "type": "shell",
+            "command": "react-native run-android",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "RN: Run packager + Reverse + Build Debug [I]",
+            "type": "shell",
+            "command": "react-native run-ios",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
