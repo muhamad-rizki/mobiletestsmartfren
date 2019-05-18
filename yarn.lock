@@ -533,7 +533,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.9"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.4":
   version "7.4.4"
   resolved "http://localhost:8888/repository/npm-group/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   dependencies:
@@ -712,6 +712,23 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
+"@mrmlnc/readdir-enhanced@^2.2.1":
+  version "2.2.1"
+  resolved "http://localhost:8888/repository/npm-group/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
+  dependencies:
+    call-me-maybe "^1.0.1"
+    glob-to-regexp "^0.3.0"
+
+"@nodelib/fs.stat@^1.1.2":
+  version "1.1.3"
+  resolved "http://localhost:8888/repository/npm-group/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
+
+"@react-native-community/blur@^3.3.1":
+  version "3.3.1"
+  resolved "http://localhost:8888/repository/npm-group/@react-native-community/blur/-/blur-3.3.1.tgz#bc9ecd6d85d89739d8180138716535ac7cfa4680"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@react-native-community/cli@^1.2.1":
   version "1.9.4"
   resolved "http://localhost:8888/repository/npm-group/@react-native-community/cli/-/cli-1.9.4.tgz#51e4ba30aa6ee29f0c1e2bedf69ac7d1a4df1a8c"
@@ -751,9 +768,64 @@
     xcode "^2.0.0"
     xmldoc "^0.4.0"
 
+"@react-navigation/core@~3.4.1":
+  version "3.4.1"
+  resolved "http://localhost:8888/repository/npm-group/@react-navigation/core/-/core-3.4.1.tgz#8c7e0e53cfb8ccaf87afb76a2733f5e5fde20cd8"
+  dependencies:
+    hoist-non-react-statics "^3.3.0"
+    path-to-regexp "^1.7.0"
+    query-string "^6.4.2"
+    react-is "^16.8.6"
+
+"@react-navigation/native@~3.5.0":
+  version "3.5.0"
+  resolved "http://localhost:8888/repository/npm-group/@react-navigation/native/-/native-3.5.0.tgz#f5d16e0845ac26d1147d1caa481f18a00740e7ae"
+  dependencies:
+    hoist-non-react-statics "^3.0.1"
+    react-native-safe-area-view "^0.14.1"
+    react-native-screens "^1.0.0 || ^1.0.0-alpha"
+
+"@redux-saga/core@^1.0.2":
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/core/-/core-1.0.2.tgz#4336a5bb4253e5ca69681c25a863fbbc03ea6d88"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@redux-saga/deferred" "^1.0.1"
+    "@redux-saga/delay-p" "^1.0.1"
+    "@redux-saga/is" "^1.0.2"
+    "@redux-saga/symbols" "^1.0.1"
+    "@redux-saga/types" "^1.0.2"
+    redux ">=0.10 <5"
+    typescript-tuple "^2.1.0"
+
+"@redux-saga/deferred@^1.0.1":
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/deferred/-/deferred-1.0.1.tgz#c895445e486bded90acf0b873b4e978fbfe458c2"
+
+"@redux-saga/delay-p@^1.0.1":
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/delay-p/-/delay-p-1.0.1.tgz#d69fc6103c7509ae80faa144ea17bbc69e51e029"
+  dependencies:
+    "@redux-saga/symbols" "^1.0.1"
+
+"@redux-saga/is@^1.0.2":
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/is/-/is-1.0.2.tgz#7f4be014c97061898d7efb11d6c9de31e943ed38"
+  dependencies:
+    "@redux-saga/symbols" "^1.0.1"
+    "@redux-saga/types" "^1.0.2"
+
+"@redux-saga/symbols@^1.0.1":
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/symbols/-/symbols-1.0.1.tgz#46512ae1275f88df061c42168d0f600ddb170c1e"
+
+"@redux-saga/types@^1.0.2":
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/@redux-saga/types/-/types-1.0.2.tgz#1d94f02800b094753f9271c206a26c2a06ca14ee"
+
 "@types/babel__core@^7.1.0":
-  version "7.1.1"
-  resolved "http://localhost:8888/repository/npm-group/@types/babel__core/-/babel__core-7.1.1.tgz#ce9a9e5d92b7031421e1d0d74ae59f572ba48be6"
+  version "7.1.2"
+  resolved "http://localhost:8888/repository/npm-group/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
@@ -796,6 +868,10 @@
   dependencies:
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
+
+"@types/node@*":
+  version "12.0.2"
+  resolved "http://localhost:8888/repository/npm-group/@types/node/-/node-12.0.2.tgz#3452a24edf9fea138b48fad4a0a028a683da1e40"
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
@@ -921,6 +997,13 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
+apisauce@^1.0.2:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/apisauce/-/apisauce-1.0.2.tgz#3605dbf4f19896618a0199f2cb717546b8971a06"
+  dependencies:
+    axios "^0.18.0"
+    ramda "^0.25.0"
+
 aproba@^1.0.3:
   version "1.2.0"
   resolved "http://localhost:8888/repository/npm-group/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -974,9 +1057,17 @@ arr-union@^3.1.0:
   version "3.1.0"
   resolved "http://localhost:8888/repository/npm-group/arr-union/-/arr-union-3.1.0.tgz#e39b09aea9def866a8f206e288af63919bae39c4"
 
+array-each@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/array-each/-/array-each-1.0.1.tgz#a794af0c05ab1752846ee753a1f211a05ba0c44f"
+
 array-equal@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/array-equal/-/array-equal-1.0.0.tgz#8c2a5ef2472fd9ea742b04c77a75093ba2757c93"
+
+array-filter@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/array-filter/-/array-filter-1.0.0.tgz#baf79e62e6ef4c2a4c0b831232daffec251f9d83"
 
 array-filter@~0.0.0:
   version "0.0.1"
@@ -1001,6 +1092,20 @@ array-slice@^0.2.3:
   version "0.2.3"
   resolved "http://localhost:8888/repository/npm-group/array-slice/-/array-slice-0.2.3.tgz#dd3cfb80ed7973a75117cdac69b0b99ec86186f5"
 
+array-slice@^1.0.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/array-slice/-/array-slice-1.1.0.tgz#e368ea15f89bc7069f7ffb89aec3a6c7d4ac22d4"
+
+array-union@^1.0.1:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
+  dependencies:
+    array-uniq "^1.0.1"
+
+array-uniq@^1.0.1:
+  version "1.0.3"
+  resolved "http://localhost:8888/repository/npm-group/array-uniq/-/array-uniq-1.0.3.tgz#af6ac877a25cc7f74e058894753858dfdb24fdb6"
+
 array-unique@^0.2.1:
   version "0.2.1"
   resolved "http://localhost:8888/repository/npm-group/array-unique/-/array-unique-0.2.1.tgz#a1d97ccafcbc2625cc70fadceb36a50c58b01a53"
@@ -1008,6 +1113,18 @@ array-unique@^0.2.1:
 array-unique@^0.3.2:
   version "0.3.2"
   resolved "http://localhost:8888/repository/npm-group/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
+
+array.prototype.flat@^1.2.1:
+  version "1.2.1"
+  resolved "http://localhost:8888/repository/npm-group/array.prototype.flat/-/array.prototype.flat-1.2.1.tgz#812db8f02cad24d3fab65dd67eabe3b8903494a4"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.10.0"
+    function-bind "^1.1.1"
+
+arrify@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
 art@^0.10.0:
   version "0.10.3"
@@ -1064,6 +1181,13 @@ aws-sign2@~0.7.0:
 aws4@^1.8.0:
   version "1.8.0"
   resolved "http://localhost:8888/repository/npm-group/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
+
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://localhost:8888/repository/npm-group/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
 
 axobject-query@^2.0.2:
   version "2.0.2"
@@ -1155,6 +1279,10 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
+base-64@^0.1.0:
+  version "0.1.0"
+  resolved "http://localhost:8888/repository/npm-group/base-64/-/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
+
 base64-js@^1.1.2, base64-js@^1.2.3:
   version "1.3.0"
   resolved "http://localhost:8888/repository/npm-group/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
@@ -1186,6 +1314,10 @@ bcrypt-pbkdf@^1.0.0:
 big-integer@^1.6.7:
   version "1.6.43"
   resolved "http://localhost:8888/repository/npm-group/big-integer/-/big-integer-1.6.43.tgz#8ac15bf13e93e509500859061233e19d8d0d99d1"
+
+boolbase@~1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
 
 bplist-creator@0.0.7:
   version "0.0.7"
@@ -1245,9 +1377,24 @@ bser@^2.0.0:
   dependencies:
     node-int64 "^0.4.0"
 
+buffer-alloc-unsafe@^1.1.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
+
+buffer-alloc@^1.2.0:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/buffer-alloc/-/buffer-alloc-1.2.0.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
+  dependencies:
+    buffer-alloc-unsafe "^1.1.0"
+    buffer-fill "^1.0.0"
+
 buffer-crc32@^0.2.13:
   version "0.2.13"
   resolved "http://localhost:8888/repository/npm-group/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+
+buffer-fill@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1271,6 +1418,10 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
+call-me-maybe@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/call-me-maybe/-/call-me-maybe-1.0.1.tgz#26d208ea89e37b5cbde60250a15f031c16a4d66b"
+
 caller-callsite@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/caller-callsite/-/caller-callsite-2.0.0.tgz#847e0fce0a223750a9a027c54b33731ad3154134"
@@ -1290,6 +1441,13 @@ callsites@^2.0.0:
 callsites@^3.0.0:
   version "3.1.0"
   resolved "http://localhost:8888/repository/npm-group/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
+
+camel-case@^3.0.0:
+  version "3.0.0"
+  resolved "http://localhost:8888/repository/npm-group/camel-case/-/camel-case-3.0.0.tgz#ca3c3688a4e9cf3a4cda777dc4dcbc713249cf73"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case "^1.1.1"
 
 camelcase@^4.1.0:
   version "4.1.0"
@@ -1315,7 +1473,7 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "http://localhost:8888/repository/npm-group/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-chalk@^1.1.1:
+chalk@^1.1.1, chalk@^1.1.3:
   version "1.1.3"
   resolved "http://localhost:8888/repository/npm-group/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
   dependencies:
@@ -1333,6 +1491,29 @@ chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1, chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+change-case@^3.0.1:
+  version "3.1.0"
+  resolved "http://localhost:8888/repository/npm-group/change-case/-/change-case-3.1.0.tgz#0e611b7edc9952df2e8513b27b42de72647dd17e"
+  dependencies:
+    camel-case "^3.0.0"
+    constant-case "^2.0.0"
+    dot-case "^2.1.0"
+    header-case "^1.0.0"
+    is-lower-case "^1.1.0"
+    is-upper-case "^1.1.0"
+    lower-case "^1.1.1"
+    lower-case-first "^1.0.0"
+    no-case "^2.3.2"
+    param-case "^2.1.0"
+    pascal-case "^2.0.0"
+    path-case "^2.1.0"
+    sentence-case "^2.1.0"
+    snake-case "^2.1.0"
+    swap-case "^1.1.0"
+    title-case "^2.1.0"
+    upper-case "^1.1.1"
+    upper-case-first "^1.1.0"
+
 chardet@^0.4.0:
   version "0.4.2"
   resolved "http://localhost:8888/repository/npm-group/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
@@ -1341,6 +1522,17 @@ chardet@^0.7.0:
   version "0.7.0"
   resolved "http://localhost:8888/repository/npm-group/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
 
+cheerio@^1.0.0-rc.2:
+  version "1.0.0-rc.3"
+  resolved "http://localhost:8888/repository/npm-group/cheerio/-/cheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
+  dependencies:
+    css-select "~1.2.0"
+    dom-serializer "~0.1.1"
+    entities "~1.1.1"
+    htmlparser2 "^3.9.1"
+    lodash "^4.15.0"
+    parse5 "^3.0.1"
+
 chownr@^1.1.1:
   version "1.1.1"
   resolved "http://localhost:8888/repository/npm-group/chownr/-/chownr-1.1.1.tgz#54726b8b8fff4df053c42187e801fb4412df1494"
@@ -1348,6 +1540,10 @@ chownr@^1.1.1:
 ci-info@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
+
+clamp@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -1363,6 +1559,10 @@ cli-cursor@^2.1.0:
   resolved "http://localhost:8888/repository/npm-group/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
   dependencies:
     restore-cursor "^2.0.0"
+
+cli-spinners@^2.0.0:
+  version "2.1.0"
+  resolved "http://localhost:8888/repository/npm-group/cli-spinners/-/cli-spinners-2.1.0.tgz#22c34b4d51f573240885b201efda4e4ec9fff3c7"
 
 cli-width@^2.0.0:
   version "2.2.0"
@@ -1383,6 +1583,18 @@ cliui@^4.0.0:
     string-width "^2.1.1"
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
+
+cliui@^5.0.0:
+  version "5.0.0"
+  resolved "http://localhost:8888/repository/npm-group/cliui/-/cliui-5.0.0.tgz#deefcfdb2e800784aa34f46fa08e06851c7bbbc5"
+  dependencies:
+    string-width "^3.1.0"
+    strip-ansi "^5.2.0"
+    wrap-ansi "^5.1.0"
+
+clone@^1.0.2:
+  version "1.0.4"
+  resolved "http://localhost:8888/repository/npm-group/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
 
 co@^4.6.0:
   version "4.6.0"
@@ -1479,6 +1691,13 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
+constant-case@^2.0.0:
+  version "2.0.0"
+  resolved "http://localhost:8888/repository/npm-group/constant-case/-/constant-case-2.0.0.tgz#4175764d389d3fa9c8ecd29186ed6005243b6a46"
+  dependencies:
+    snake-case "^2.1.0"
+    upper-case "^1.1.1"
+
 contains-path@^0.1.0:
   version "0.1.0"
   resolved "http://localhost:8888/repository/npm-group/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
@@ -1544,6 +1763,19 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+css-select@~1.2.0:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
+  dependencies:
+    boolbase "~1.0.0"
+    css-what "2.1"
+    domutils "1.5.1"
+    nth-check "~1.0.1"
+
+css-what@2.1:
+  version "2.1.3"
+  resolved "http://localhost:8888/repository/npm-group/css-what/-/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
+
 cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.6"
   resolved "http://localhost:8888/repository/npm-group/cssom/-/cssom-0.3.6.tgz#f85206cee04efa841f3c5982a74ba96ab20d65ad"
@@ -1606,6 +1838,12 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "http://localhost:8888/repository/npm-group/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
+defaults@^1.0.3:
+  version "1.0.3"
+  resolved "http://localhost:8888/repository/npm-group/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
+  dependencies:
+    clone "^1.0.2"
+
 define-properties@^1.1.2, define-properties@^1.1.3:
   version "1.1.3"
   resolved "http://localhost:8888/repository/npm-group/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
@@ -1631,6 +1869,17 @@ define-property@^2.0.2:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
 
+del@^3.0.0:
+  version "3.0.0"
+  resolved "http://localhost:8888/repository/npm-group/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
+  dependencies:
+    globby "^6.1.0"
+    is-path-cwd "^1.0.0"
+    is-path-in-cwd "^1.0.0"
+    p-map "^1.1.1"
+    pify "^3.0.0"
+    rimraf "^2.2.8"
+
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -1651,6 +1900,10 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "http://localhost:8888/repository/npm-group/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
+detect-file@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/detect-file/-/detect-file-1.0.0.tgz#f0d66d03672a825cb1b73bdb3fe62310c8e552b7"
+
 detect-libc@^1.0.2:
   version "1.0.3"
   resolved "http://localhost:8888/repository/npm-group/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
@@ -1662,6 +1915,17 @@ detect-newline@^2.1.0:
 diff-sequences@^24.3.0:
   version "24.3.0"
   resolved "http://localhost:8888/repository/npm-group/diff-sequences/-/diff-sequences-24.3.0.tgz#0f20e8a1df1abddaf4d9c226680952e64118b975"
+
+dir-glob@2.0.0:
+  version "2.0.0"
+  resolved "http://localhost:8888/repository/npm-group/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"
+  dependencies:
+    arrify "^1.0.1"
+    path-type "^3.0.0"
+
+discontinuous-range@1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
 
 doctrine@1.5.0:
   version "1.5.0"
@@ -1682,15 +1946,52 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-serializer@0, dom-serializer@~0.1.1:
+  version "0.1.1"
+  resolved "http://localhost:8888/repository/npm-group/dom-serializer/-/dom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
+  dependencies:
+    domelementtype "^1.3.0"
+    entities "^1.1.1"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "http://localhost:8888/repository/npm-group/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
+
+domelementtype@1, domelementtype@^1.3.0, domelementtype@^1.3.1:
+  version "1.3.1"
+  resolved "http://localhost:8888/repository/npm-group/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
 
 domexception@^1.0.1:
   version "1.0.1"
   resolved "http://localhost:8888/repository/npm-group/domexception/-/domexception-1.0.1.tgz#937442644ca6a31261ef36e3ec677fe805582c90"
   dependencies:
     webidl-conversions "^4.0.2"
+
+domhandler@^2.3.0:
+  version "2.4.2"
+  resolved "http://localhost:8888/repository/npm-group/domhandler/-/domhandler-2.4.2.tgz#8805097e933d65e85546f726d60f5eb88b44f803"
+  dependencies:
+    domelementtype "1"
+
+domutils@1.5.1:
+  version "1.5.1"
+  resolved "http://localhost:8888/repository/npm-group/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
+  dependencies:
+    dom-serializer "0"
+    domelementtype "1"
+
+domutils@^1.5.1:
+  version "1.7.0"
+  resolved "http://localhost:8888/repository/npm-group/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
+  dependencies:
+    dom-serializer "0"
+    domelementtype "1"
+
+dot-case@^2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/dot-case/-/dot-case-2.1.1.tgz#34dcf37f50a8e93c2b3bca8bb7fb9155c7da3bee"
+  dependencies:
+    no-case "^2.2.0"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -1723,9 +2024,39 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+entities@^1.1.1, entities@~1.1.1:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
+
 envinfo@^5.7.0:
   version "5.12.1"
   resolved "http://localhost:8888/repository/npm-group/envinfo/-/envinfo-5.12.1.tgz#83068c33e0972eb657d6bc69a6df30badefb46ef"
+
+enzyme@^3.9.0:
+  version "3.9.0"
+  resolved "http://localhost:8888/repository/npm-group/enzyme/-/enzyme-3.9.0.tgz#2b491f06ca966eb56b6510068c7894a7e0be3909"
+  dependencies:
+    array.prototype.flat "^1.2.1"
+    cheerio "^1.0.0-rc.2"
+    function.prototype.name "^1.1.0"
+    has "^1.0.3"
+    html-element-map "^1.0.0"
+    is-boolean-object "^1.0.0"
+    is-callable "^1.1.4"
+    is-number-object "^1.0.3"
+    is-regex "^1.0.4"
+    is-string "^1.0.4"
+    is-subset "^0.1.1"
+    lodash.escape "^4.0.1"
+    lodash.isequal "^4.5.0"
+    object-inspect "^1.6.0"
+    object-is "^1.0.1"
+    object.assign "^4.1.0"
+    object.entries "^1.0.4"
+    object.values "^1.0.4"
+    raf "^3.4.0"
+    rst-selector-parser "^2.2.3"
+    string.prototype.trim "^1.1.2"
 
 error-ex@^1.2.0, error-ex@^1.3.1:
   version "1.3.2"
@@ -1740,7 +2071,7 @@ errorhandler@^1.5.0:
     accepts "~1.3.7"
     escape-html "~1.0.3"
 
-es-abstract@^1.11.0, es-abstract@^1.12.0, es-abstract@^1.5.1, es-abstract@^1.7.0:
+es-abstract@^1.10.0, es-abstract@^1.11.0, es-abstract@^1.12.0, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.7.0:
   version "1.13.0"
   resolved "http://localhost:8888/repository/npm-group/es-abstract/-/es-abstract-1.13.0.tgz#ac86145fdd5099d8dd49558ccba2eaf9b88e24e9"
   dependencies:
@@ -1763,7 +2094,7 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "http://localhost:8888/repository/npm-group/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
-escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "http://localhost:8888/repository/npm-group/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
@@ -2026,6 +2357,12 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+expand-tilde@^2.0.0, expand-tilde@^2.0.2:
+  version "2.0.2"
+  resolved "http://localhost:8888/repository/npm-group/expand-tilde/-/expand-tilde-2.0.2.tgz#97e801aa052df02454de46b02bf621642cdc8502"
+  dependencies:
+    homedir-polyfill "^1.0.1"
+
 expect@^24.8.0:
   version "24.8.0"
   resolved "http://localhost:8888/repository/npm-group/expect/-/expect-24.8.0.tgz#471f8ec256b7b6129ca2524b2a62f030df38718d"
@@ -2056,7 +2393,7 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@~3.0.2:
+extend@^3.0.0, extend@~3.0.2:
   version "3.0.2"
   resolved "http://localhost:8888/repository/npm-group/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
@@ -2116,6 +2453,17 @@ fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "http://localhost:8888/repository/npm-group/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
 
+fast-glob@^2.0.2:
+  version "2.2.6"
+  resolved "http://localhost:8888/repository/npm-group/fast-glob/-/fast-glob-2.2.6.tgz#a5d5b697ec8deda468d85a74035290a025a95295"
+  dependencies:
+    "@mrmlnc/readdir-enhanced" "^2.2.1"
+    "@nodelib/fs.stat" "^1.1.2"
+    glob-parent "^3.1.0"
+    is-glob "^4.0.0"
+    merge2 "^1.2.3"
+    micromatch "^3.1.10"
+
 fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
@@ -2149,7 +2497,7 @@ fbjs-scripts@^1.0.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.9:
+fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.17"
   resolved "http://localhost:8888/repository/npm-group/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -2241,6 +2589,29 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+findup-sync@^2.0.0:
+  version "2.0.0"
+  resolved "http://localhost:8888/repository/npm-group/findup-sync/-/findup-sync-2.0.0.tgz#9326b1488c22d1a6088650a86901b2d9a90a2cbc"
+  dependencies:
+    detect-file "^1.0.0"
+    is-glob "^3.1.0"
+    micromatch "^3.0.4"
+    resolve-dir "^1.0.1"
+
+fined@^1.0.1:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/fined/-/fined-1.2.0.tgz#d00beccf1aa2b475d16d423b0238b713a2c4a37b"
+  dependencies:
+    expand-tilde "^2.0.2"
+    is-plain-object "^2.0.3"
+    object.defaults "^1.1.0"
+    object.pick "^1.2.0"
+    parse-filepath "^1.0.1"
+
+flagged-respawn@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/flagged-respawn/-/flagged-respawn-1.0.1.tgz#e7de6f1279ddd9ca9aac8a5971d618606b3aab41"
+
 flat-cache@^2.0.1:
   version "2.0.1"
   resolved "http://localhost:8888/repository/npm-group/flat-cache/-/flat-cache-2.0.1.tgz#5d296d6f04bda44a4630a301413bdbc2ec085ec0"
@@ -2253,6 +2624,12 @@ flatted@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
 
+follow-redirects@^1.3.0:
+  version "1.7.0"
+  resolved "http://localhost:8888/repository/npm-group/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
+  dependencies:
+    debug "^3.2.6"
+
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2260,6 +2637,12 @@ for-in@^1.0.1, for-in@^1.0.2:
 for-own@^0.1.4:
   version "0.1.5"
   resolved "http://localhost:8888/repository/npm-group/for-own/-/for-own-0.1.5.tgz#5265c681a4f294dabbf17c9509b6763aa84510ce"
+  dependencies:
+    for-in "^1.0.1"
+
+for-own@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/for-own/-/for-own-1.0.0.tgz#c63332f415cedc4b04dbfe70cf836494c53cb44b"
   dependencies:
     for-in "^1.0.1"
 
@@ -2302,8 +2685,8 @@ fs-extra@^7.0.1:
     universalify "^0.1.0"
 
 fs-minipass@^1.2.5:
-  version "1.2.5"
-  resolved "http://localhost:8888/repository/npm-group/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
+  version "1.2.6"
+  resolved "http://localhost:8888/repository/npm-group/fs-minipass/-/fs-minipass-1.2.6.tgz#2c5cc30ded81282bfe8a0d7c7c1853ddeb102c07"
   dependencies:
     minipass "^2.2.1"
 
@@ -2318,9 +2701,17 @@ fsevents@^1.2.3, fsevents@^1.2.7:
     nan "^2.12.1"
     node-pre-gyp "^0.12.0"
 
-function-bind@^1.1.1:
+function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "http://localhost:8888/repository/npm-group/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+
+function.prototype.name@^1.1.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/function.prototype.name/-/function.prototype.name-1.1.0.tgz#8bd763cc0af860a859cc5d49384d74b932cd2327"
+  dependencies:
+    define-properties "^1.1.2"
+    function-bind "^1.1.1"
+    is-callable "^1.1.3"
 
 functional-red-black-tree@^1.0.1:
   version "1.0.1"
@@ -2352,6 +2743,10 @@ gauge@~2.7.3:
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "http://localhost:8888/repository/npm-group/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
+
+get-caller-file@^2.0.1:
+  version "2.0.5"
+  resolved "http://localhost:8888/repository/npm-group/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -2386,7 +2781,18 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
+glob-parent@^3.1.0:
+  version "3.1.0"
+  resolved "http://localhost:8888/repository/npm-group/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
+  dependencies:
+    is-glob "^3.1.0"
+    path-dirname "^1.0.0"
+
+glob-to-regexp@^0.3.0:
+  version "0.3.0"
+  resolved "http://localhost:8888/repository/npm-group/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
+
+glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
   version "7.1.4"
   resolved "http://localhost:8888/repository/npm-group/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
   dependencies:
@@ -2396,6 +2802,24 @@ glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+global-modules@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/global-modules/-/global-modules-1.0.0.tgz#6d770f0eb523ac78164d72b5e71a8877265cc3ea"
+  dependencies:
+    global-prefix "^1.0.1"
+    is-windows "^1.0.1"
+    resolve-dir "^1.0.0"
+
+global-prefix@^1.0.1:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/global-prefix/-/global-prefix-1.0.2.tgz#dbf743c6c14992593c655568cb66ed32c0122ebe"
+  dependencies:
+    expand-tilde "^2.0.2"
+    homedir-polyfill "^1.0.1"
+    ini "^1.3.4"
+    is-windows "^1.0.1"
+    which "^1.2.14"
 
 global@^4.3.0:
   version "4.3.2"
@@ -2408,6 +2832,28 @@ globals@^11.1.0, globals@^11.7.0:
   version "11.12.0"
   resolved "http://localhost:8888/repository/npm-group/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
 
+globby@^6.1.0:
+  version "6.1.0"
+  resolved "http://localhost:8888/repository/npm-group/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
+  dependencies:
+    array-union "^1.0.1"
+    glob "^7.0.3"
+    object-assign "^4.0.1"
+    pify "^2.0.0"
+    pinkie-promise "^2.0.0"
+
+globby@^8.0.0:
+  version "8.0.2"
+  resolved "http://localhost:8888/repository/npm-group/globby/-/globby-8.0.2.tgz#5697619ccd95c5275dbb2d6faa42087c1a941d8d"
+  dependencies:
+    array-union "^1.0.1"
+    dir-glob "2.0.0"
+    fast-glob "^2.0.2"
+    glob "^7.1.2"
+    ignore "^3.3.5"
+    pify "^3.0.0"
+    slash "^1.0.0"
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.15"
   resolved "http://localhost:8888/repository/npm-group/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
@@ -2416,7 +2862,7 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "http://localhost:8888/repository/npm-group/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-handlebars@^4.1.2:
+handlebars@^4.1.0, handlebars@^4.1.2:
   version "4.1.2"
   resolved "http://localhost:8888/repository/npm-group/handlebars/-/handlebars-4.1.2.tgz#b6b37c1ced0306b221e094fc7aca3ec23b131b67"
   dependencies:
@@ -2488,15 +2934,55 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+header-case@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/header-case/-/header-case-1.0.1.tgz#9535973197c144b09613cd65d317ef19963bd02d"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case "^1.1.3"
+
+hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
+  version "2.5.5"
+  resolved "http://localhost:8888/repository/npm-group/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+
+hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.3.0:
+  version "3.3.0"
+  resolved "http://localhost:8888/repository/npm-group/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
+  dependencies:
+    react-is "^16.7.0"
+
+homedir-polyfill@^1.0.1:
+  version "1.0.3"
+  resolved "http://localhost:8888/repository/npm-group/homedir-polyfill/-/homedir-polyfill-1.0.3.tgz#743298cef4e5af3e194161fbadcc2151d3a058e8"
+  dependencies:
+    parse-passwd "^1.0.0"
+
 hosted-git-info@^2.1.4:
   version "2.7.1"
   resolved "http://localhost:8888/repository/npm-group/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
+
+html-element-map@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/html-element-map/-/html-element-map-1.0.1.tgz#3c4fcb4874ebddfe4283b51c8994e7713782b592"
+  dependencies:
+    array-filter "^1.0.0"
 
 html-encoding-sniffer@^1.0.2:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/html-encoding-sniffer/-/html-encoding-sniffer-1.0.2.tgz#e70d84b94da53aa375e11fe3a351be6642ca46f8"
   dependencies:
     whatwg-encoding "^1.0.1"
+
+htmlparser2@^3.9.1:
+  version "3.10.1"
+  resolved "http://localhost:8888/repository/npm-group/htmlparser2/-/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"
+  dependencies:
+    domelementtype "^1.3.1"
+    domhandler "^2.3.0"
+    domutils "^1.5.1"
+    entities "^1.1.1"
+    inherits "^2.0.1"
+    readable-stream "^3.1.1"
 
 http-errors@~1.7.2:
   version "1.7.2"
@@ -2516,6 +3002,10 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+i18n-js@^3.2.2:
+  version "3.2.2"
+  resolved "http://localhost:8888/repository/npm-group/i18n-js/-/i18n-js-3.2.2.tgz#9f7f552320c0e4cc6b35c50a790cc50465c7dc90"
+
 iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
   resolved "http://localhost:8888/repository/npm-group/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -2527,6 +3017,10 @@ ignore-walk@^3.0.1:
   resolved "http://localhost:8888/repository/npm-group/ignore-walk/-/ignore-walk-3.0.1.tgz#a83e62e7d272ac0e3b551aaa82831a19b69f82f8"
   dependencies:
     minimatch "^3.0.4"
+
+ignore@^3.3.5:
+  version "3.3.10"
+  resolved "http://localhost:8888/repository/npm-group/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
 
 ignore@^4.0.6:
   version "4.0.6"
@@ -2568,11 +3062,11 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.3, inherits@^2.0.3, inherits@~2.0.3:
+inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.3:
   version "2.0.3"
   resolved "http://localhost:8888/repository/npm-group/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
-ini@~1.3.0:
+ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "http://localhost:8888/repository/npm-group/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
@@ -2595,7 +3089,7 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@^6.2.2:
+inquirer@^6.0.0, inquirer@^6.2.2:
   version "6.3.1"
   resolved "http://localhost:8888/repository/npm-group/inquirer/-/inquirer-6.3.1.tgz#7a413b5e7950811013a3db491c61d1f3b776e8e7"
   dependencies:
@@ -2613,7 +3107,15 @@ inquirer@^6.2.2:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-invariant@^2.2.4:
+install@^0.12.2:
+  version "0.12.2"
+  resolved "http://localhost:8888/repository/npm-group/install/-/install-0.12.2.tgz#ea10e9b2cbb5b0484f25080b24b5b34429d9f564"
+
+interpret@^1.2.0:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
+
+invariant@2.2.4, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "http://localhost:8888/repository/npm-group/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -2626,6 +3128,13 @@ invert-kv@^1.0.0:
 invert-kv@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
+
+is-absolute@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/is-absolute/-/is-absolute-1.0.0.tgz#395e1ae84b11f26ad1795e73c17378e48a301576"
+  dependencies:
+    is-relative "^1.0.0"
+    is-windows "^1.0.1"
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
@@ -2643,11 +3152,15 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "http://localhost:8888/repository/npm-group/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
 
+is-boolean-object@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/is-boolean-object/-/is-boolean-object-1.0.0.tgz#98f8b28030684219a95f375cfbd88ce3405dff93"
+
 is-buffer@^1.1.5:
   version "1.1.6"
   resolved "http://localhost:8888/repository/npm-group/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
-is-callable@^1.1.4:
+is-callable@^1.1.3, is-callable@^1.1.4:
   version "1.1.4"
   resolved "http://localhost:8888/repository/npm-group/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
 
@@ -2717,6 +3230,10 @@ is-extglob@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/is-extglob/-/is-extglob-1.0.0.tgz#ac468177c4943405a092fc8f29760c6ffc6206c0"
 
+is-extglob@^2.1.0, is-extglob@^2.1.1:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
+
 is-fullwidth-code-point@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz#ef9e31386f031a7f0d643af82fde50c457ef00cb"
@@ -2737,6 +3254,28 @@ is-glob@^2.0.0, is-glob@^2.0.1:
   dependencies:
     is-extglob "^1.0.0"
 
+is-glob@^3.1.0:
+  version "3.1.0"
+  resolved "http://localhost:8888/repository/npm-group/is-glob/-/is-glob-3.1.0.tgz#7ba5ae24217804ac70707b96922567486cc3e84a"
+  dependencies:
+    is-extglob "^2.1.0"
+
+is-glob@^4.0.0:
+  version "4.0.1"
+  resolved "http://localhost:8888/repository/npm-group/is-glob/-/is-glob-4.0.1.tgz#7567dbe9f2f5e2467bc77ab83c4a29482407a5dc"
+  dependencies:
+    is-extglob "^2.1.1"
+
+is-lower-case@^1.1.0:
+  version "1.1.3"
+  resolved "http://localhost:8888/repository/npm-group/is-lower-case/-/is-lower-case-1.1.3.tgz#7e147be4768dc466db3bfb21cc60b31e6ad69393"
+  dependencies:
+    lower-case "^1.1.0"
+
+is-number-object@^1.0.3:
+  version "1.0.3"
+  resolved "http://localhost:8888/repository/npm-group/is-number-object/-/is-number-object-1.0.3.tgz#f265ab89a9f445034ef6aff15a8f00b00f551799"
+
 is-number@^2.1.0:
   version "2.1.0"
   resolved "http://localhost:8888/repository/npm-group/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
@@ -2752,6 +3291,22 @@ is-number@^3.0.0:
 is-number@^4.0.0:
   version "4.0.0"
   resolved "http://localhost:8888/repository/npm-group/is-number/-/is-number-4.0.0.tgz#0026e37f5454d73e356dfe6564699867c6a7f0ff"
+
+is-path-cwd@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/is-path-cwd/-/is-path-cwd-1.0.0.tgz#d225ec23132e89edd38fda767472e62e65f1106d"
+
+is-path-in-cwd@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/is-path-in-cwd/-/is-path-in-cwd-1.0.1.tgz#5ac48b345ef675339bd6c7a48a912110b241cf52"
+  dependencies:
+    is-path-inside "^1.0.0"
+
+is-path-inside@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/is-path-inside/-/is-path-inside-1.0.1.tgz#8ef5b7de50437a3fdca6b4e865ef7aa55cb48036"
+  dependencies:
+    path-is-inside "^1.0.1"
 
 is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
@@ -2777,9 +3332,23 @@ is-regex@^1.0.4:
   dependencies:
     has "^1.0.1"
 
+is-relative@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/is-relative/-/is-relative-1.0.0.tgz#a1bb6935ce8c5dba1e8b9754b9b2dcc020e2260d"
+  dependencies:
+    is-unc-path "^1.0.0"
+
 is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
+
+is-string@^1.0.4:
+  version "1.0.4"
+  resolved "http://localhost:8888/repository/npm-group/is-string/-/is-string-1.0.4.tgz#cc3a9b69857d621e963725a24caeec873b826e64"
+
+is-subset@^0.1.1:
+  version "0.1.1"
+  resolved "http://localhost:8888/repository/npm-group/is-subset/-/is-subset-0.1.1.tgz#8a59117d932de1de00f245fcdd39ce43f1e939a6"
 
 is-symbol@^1.0.2:
   version "1.0.2"
@@ -2791,7 +3360,19 @@ is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
-is-windows@^1.0.2:
+is-unc-path@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/is-unc-path/-/is-unc-path-1.0.0.tgz#d731e8898ed090a12c352ad2eaed5095ad322c9d"
+  dependencies:
+    unc-path-regex "^0.1.2"
+
+is-upper-case@^1.1.0:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/is-upper-case/-/is-upper-case-1.1.2.tgz#8d0b1fa7e7933a1e58483600ec7d9661cbaf756f"
+  dependencies:
+    upper-case "^1.1.0"
+
+is-windows@^1.0.1, is-windows@^1.0.2:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
 
@@ -2799,9 +3380,19 @@ is-wsl@^1.1.0:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "http://localhost:8888/repository/npm-group/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
+
+isbinaryfile@^3.0.2:
+  version "3.0.3"
+  resolved "http://localhost:8888/repository/npm-group/isbinaryfile/-/isbinaryfile-3.0.3.tgz#5d6def3edebf6e8ca8cae9c30183a804b5f8be80"
+  dependencies:
+    buffer-alloc "^1.2.0"
 
 isexe@^2.0.0:
   version "2.0.0"
@@ -2863,8 +3454,8 @@ istanbul-lib-source-maps@^3.0.1:
     source-map "^0.6.1"
 
 istanbul-reports@^2.1.1:
-  version "2.2.4"
-  resolved "http://localhost:8888/repository/npm-group/istanbul-reports/-/istanbul-reports-2.2.4.tgz#4e0d0ddf0f0ad5b49a314069d31b4f06afe49ad3"
+  version "2.2.6"
+  resolved "http://localhost:8888/repository/npm-group/istanbul-reports/-/istanbul-reports-2.2.6.tgz#7b4f2660d82b29303a8fe6091f8ca4bf058da1af"
   dependencies:
     handlebars "^4.1.2"
 
@@ -3392,6 +3983,19 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+liftoff@^2.5.0:
+  version "2.5.0"
+  resolved "http://localhost:8888/repository/npm-group/liftoff/-/liftoff-2.5.0.tgz#2009291bb31cea861bbf10a7c15a28caf75c31ec"
+  dependencies:
+    extend "^3.0.0"
+    findup-sync "^2.0.0"
+    fined "^1.0.1"
+    flagged-respawn "^1.0.0"
+    is-plain-object "^2.0.4"
+    object.map "^1.0.0"
+    rechoir "^0.6.2"
+    resolve "^1.1.7"
+
 load-json-file@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
@@ -3424,6 +4028,22 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
+lodash.escape@^4.0.1:
+  version "4.0.1"
+  resolved "http://localhost:8888/repository/npm-group/lodash.escape/-/lodash.escape-4.0.1.tgz#c9044690c21e04294beaa517712fded1fa88de98"
+
+lodash.flattendeep@^4.4.0:
+  version "4.4.0"
+  resolved "http://localhost:8888/repository/npm-group/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "http://localhost:8888/repository/npm-group/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "http://localhost:8888/repository/npm-group/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+
 lodash.pad@^4.1.0:
   version "4.5.1"
   resolved "http://localhost:8888/repository/npm-group/lodash.pad/-/lodash.pad-4.5.1.tgz#4330949a833a7c8da22cc20f6a26c4d59debba70"
@@ -3444,15 +4064,31 @@ lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "http://localhost:8888/repository/npm-group/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
-lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "http://localhost:8888/repository/npm-group/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
+log-symbols@^2.2.0:
+  version "2.2.0"
+  resolved "http://localhost:8888/repository/npm-group/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
+  dependencies:
+    chalk "^2.0.1"
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://localhost:8888/repository/npm-group/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+lower-case-first@^1.0.0:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/lower-case-first/-/lower-case-first-1.0.2.tgz#e5da7c26f29a7073be02d52bac9980e5922adfa1"
+  dependencies:
+    lower-case "^1.1.2"
+
+lower-case@^1.1.0, lower-case@^1.1.1, lower-case@^1.1.2:
+  version "1.1.4"
+  resolved "http://localhost:8888/repository/npm-group/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
 
 lru-cache@^4.0.1:
   version "4.1.5"
@@ -3468,6 +4104,12 @@ make-dir@^2.0.0, make-dir@^2.1.0:
     pify "^4.0.1"
     semver "^5.6.0"
 
+make-iterator@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/make-iterator/-/make-iterator-1.0.1.tgz#29b33f312aa8f547c4a5e490f56afcec99133ad6"
+  dependencies:
+    kind-of "^6.0.2"
+
 makeerror@1.0.x:
   version "1.0.11"
   resolved "http://localhost:8888/repository/npm-group/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"
@@ -3480,7 +4122,7 @@ map-age-cleaner@^0.1.1:
   dependencies:
     p-defer "^1.0.0"
 
-map-cache@^0.2.2:
+map-cache@^0.2.0, map-cache@^0.2.2:
   version "0.2.2"
   resolved "http://localhost:8888/repository/npm-group/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
 
@@ -3513,6 +4155,10 @@ merge-stream@^1.0.1:
   resolved "http://localhost:8888/repository/npm-group/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
   dependencies:
     readable-stream "^2.0.1"
+
+merge2@^1.2.3:
+  version "1.2.3"
+  resolved "http://localhost:8888/repository/npm-group/merge2/-/merge2-1.2.3.tgz#7ee99dbd69bb6481689253f018488a1b902b0ed5"
 
 merge@^1.2.0:
   version "1.2.1"
@@ -3828,7 +4474,7 @@ micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-micromatch@^3.1.10, micromatch@^3.1.4:
+micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
   resolved "http://localhost:8888/repository/npm-group/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
@@ -3928,6 +4574,14 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "http://localhost:8888/repository/npm-group/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+
+moo@^0.4.3:
+  version "0.4.3"
+  resolved "http://localhost:8888/repository/npm-group/moo/-/moo-0.4.3.tgz#3f847a26f31cf625a956a87f2b10fbc013bfd10e"
+
 morgan@^1.9.0:
   version "1.9.1"
   resolved "http://localhost:8888/repository/npm-group/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
@@ -3951,8 +4605,8 @@ mute-stream@0.0.7:
   resolved "http://localhost:8888/repository/npm-group/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
 nan@^2.12.1:
-  version "2.13.2"
-  resolved "http://localhost:8888/repository/npm-group/nan/-/nan-2.13.2.tgz#f51dc7ae66ba7d5d55e1e6d4d8092e802c9aefe7"
+  version "2.14.0"
+  resolved "http://localhost:8888/repository/npm-group/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -3974,6 +4628,16 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://localhost:8888/repository/npm-group/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
+nearley@^2.7.10:
+  version "2.16.0"
+  resolved "http://localhost:8888/repository/npm-group/nearley/-/nearley-2.16.0.tgz#77c297d041941d268290ec84b739d0ee297e83a7"
+  dependencies:
+    commander "^2.19.0"
+    moo "^0.4.3"
+    railroad-diagrams "^1.0.0"
+    randexp "0.4.6"
+    semver "^5.4.1"
+
 needle@^2.2.1:
   version "2.4.0"
   resolved "http://localhost:8888/repository/npm-group/needle/-/needle-2.4.0.tgz#6833e74975c444642590e15a750288c5f939b57c"
@@ -3994,6 +4658,12 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "http://localhost:8888/repository/npm-group/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
 
+no-case@^2.2.0, no-case@^2.3.2:
+  version "2.3.2"
+  resolved "http://localhost:8888/repository/npm-group/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
+  dependencies:
+    lower-case "^1.1.1"
+
 node-fetch@^1.0.1:
   version "1.7.3"
   resolved "http://localhost:8888/repository/npm-group/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -4002,8 +4672,8 @@ node-fetch@^1.0.1:
     is-stream "^1.0.1"
 
 node-fetch@^2.2.0:
-  version "2.5.0"
-  resolved "http://localhost:8888/repository/npm-group/node-fetch/-/node-fetch-2.5.0.tgz#8028c49fc1191bba56a07adc6e2a954644a48501"
+  version "2.6.0"
+  resolved "http://localhost:8888/repository/npm-group/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -4022,6 +4692,23 @@ node-notifier@^5.2.1:
     semver "^5.5.0"
     shellwords "^0.1.1"
     which "^1.3.0"
+
+node-plop@~0.18.0:
+  version "0.18.0"
+  resolved "http://localhost:8888/repository/npm-group/node-plop/-/node-plop-0.18.0.tgz#b44647898ee9e387d46e691f13a01fac53bf49fe"
+  dependencies:
+    change-case "^3.0.1"
+    co "^4.6.0"
+    core-js "^2.4.1"
+    del "^3.0.0"
+    globby "^8.0.0"
+    handlebars "^4.1.0"
+    inquirer "^6.0.0"
+    isbinaryfile "^3.0.2"
+    lodash.get "^4.4.2"
+    mkdirp "^0.5.1"
+    pify "^4.0.0"
+    resolve "^1.2.0"
 
 node-pre-gyp@^0.12.0:
   version "0.12.0"
@@ -4094,6 +4781,12 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nth-check@~1.0.1:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
+  dependencies:
+    boolbase "~1.0.0"
+
 nullthrows@^1.1.0:
   version "1.1.1"
   resolved "http://localhost:8888/repository/npm-group/nullthrows/-/nullthrows-1.1.1.tgz#7818258843856ae971eae4208ad7d7eb19a431b1"
@@ -4122,6 +4815,14 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
+object-inspect@^1.6.0:
+  version "1.6.0"
+  resolved "http://localhost:8888/repository/npm-group/object-inspect/-/object-inspect-1.6.0.tgz#c70b6cbf72f274aab4c34c0c82f5167bf82cf15b"
+
+object-is@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/object-is/-/object-is-1.0.1.tgz#0aa60ec9989a0b3ed795cf4d06f62cf1ad6539b6"
+
 object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.1"
   resolved "http://localhost:8888/repository/npm-group/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
@@ -4140,6 +4841,15 @@ object.assign@^4.1.0:
     function-bind "^1.1.1"
     has-symbols "^1.0.0"
     object-keys "^1.0.11"
+
+object.defaults@^1.1.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/object.defaults/-/object.defaults-1.1.0.tgz#3a7f868334b407dea06da16d88d5cd29e435fecf"
+  dependencies:
+    array-each "^1.0.1"
+    array-slice "^1.0.0"
+    for-own "^1.0.0"
+    isobject "^3.0.0"
 
 object.entries@^1.0.4:
   version "1.1.0"
@@ -4166,6 +4876,13 @@ object.getownpropertydescriptors@^2.0.3:
     define-properties "^1.1.2"
     es-abstract "^1.5.1"
 
+object.map@^1.0.0:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/object.map/-/object.map-1.0.1.tgz#cf83e59dc8fcc0ad5f4250e1f78b3b81bd801d37"
+  dependencies:
+    for-own "^1.0.0"
+    make-iterator "^1.0.0"
+
 object.omit@^2.0.0:
   version "2.0.1"
   resolved "http://localhost:8888/repository/npm-group/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
@@ -4173,11 +4890,20 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
-object.pick@^1.3.0:
+object.pick@^1.2.0, object.pick@^1.3.0:
   version "1.3.0"
   resolved "http://localhost:8888/repository/npm-group/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
   dependencies:
     isobject "^3.0.1"
+
+object.values@^1.0.4:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/object.values/-/object.values-1.1.0.tgz#bf6810ef5da3e5325790eaaa2be213ea84624da9"
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.12.0"
+    function-bind "^1.1.1"
+    has "^1.0.3"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -4229,6 +4955,17 @@ options@>=0.0.5:
   version "0.0.6"
   resolved "http://localhost:8888/repository/npm-group/options/-/options-0.0.6.tgz#ec22d312806bb53e731773e7cdaefcf1c643128f"
 
+ora@^3.0.0:
+  version "3.4.0"
+  resolved "http://localhost:8888/repository/npm-group/ora/-/ora-3.4.0.tgz#bf0752491059a3ef3ed4c85097531de9fdbcd318"
+  dependencies:
+    chalk "^2.4.2"
+    cli-cursor "^2.1.0"
+    cli-spinners "^2.0.0"
+    log-symbols "^2.2.0"
+    strip-ansi "^5.2.0"
+    wcwidth "^1.0.1"
+
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
@@ -4241,7 +4978,7 @@ os-locale@^2.0.0:
     lcid "^1.0.0"
     mem "^1.1.0"
 
-os-locale@^3.0.0:
+os-locale@^3.0.0, os-locale@^3.1.0:
   version "3.1.0"
   resolved "http://localhost:8888/repository/npm-group/os-locale/-/os-locale-3.1.0.tgz#a802a6ee17f24c10483ab9935719cef4ed16bf1a"
   dependencies:
@@ -4302,6 +5039,10 @@ p-locate@^3.0.0:
   dependencies:
     p-limit "^2.0.0"
 
+p-map@^1.1.1:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
+
 p-reduce@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/p-reduce/-/p-reduce-1.0.0.tgz#18c2b0dd936a4690a529f8231f58a0fdb6a47dfa"
@@ -4314,11 +5055,25 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "http://localhost:8888/repository/npm-group/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
 
+param-case@^2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/param-case/-/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
+  dependencies:
+    no-case "^2.2.0"
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "http://localhost:8888/repository/npm-group/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
   dependencies:
     callsites "^3.0.0"
+
+parse-filepath@^1.0.1:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/parse-filepath/-/parse-filepath-1.0.2.tgz#a632127f53aaf3d15876f5872f3ffac763d6c891"
+  dependencies:
+    is-absolute "^1.0.0"
+    map-cache "^0.2.0"
+    path-root "^0.1.1"
 
 parse-glob@^3.0.4:
   version "3.0.4"
@@ -4346,17 +5101,44 @@ parse-node-version@^1.0.0:
   version "1.0.1"
   resolved "http://localhost:8888/repository/npm-group/parse-node-version/-/parse-node-version-1.0.1.tgz#e2b5dbede00e7fa9bc363607f53327e8b073189b"
 
+parse-passwd@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
+
 parse5@4.0.0:
   version "4.0.0"
   resolved "http://localhost:8888/repository/npm-group/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
+
+parse5@^3.0.1:
+  version "3.0.3"
+  resolved "http://localhost:8888/repository/npm-group/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
+  dependencies:
+    "@types/node" "*"
 
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"
   resolved "http://localhost:8888/repository/npm-group/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
 
+pascal-case@^2.0.0:
+  version "2.0.1"
+  resolved "http://localhost:8888/repository/npm-group/pascal-case/-/pascal-case-2.0.1.tgz#2d578d3455f660da65eca18ef95b4e0de912761e"
+  dependencies:
+    camel-case "^3.0.0"
+    upper-case-first "^1.1.0"
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "http://localhost:8888/repository/npm-group/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
+
+path-case@^2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/path-case/-/path-case-2.1.1.tgz#94b8037c372d3fe2906e465bb45e25d226e8eea5"
+  dependencies:
+    no-case "^2.2.0"
+
+path-dirname@^1.0.0:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/path-dirname/-/path-dirname-1.0.2.tgz#cc33d24d525e099a5388c0336c6e32b9160609e0"
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -4366,7 +5148,7 @@ path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "http://localhost:8888/repository/npm-group/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
 
-path-is-inside@^1.0.2:
+path-is-inside@^1.0.1, path-is-inside@^1.0.2:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/path-is-inside/-/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
 
@@ -4377,6 +5159,22 @@ path-key@^2.0.0, path-key@^2.0.1:
 path-parse@^1.0.6:
   version "1.0.6"
   resolved "http://localhost:8888/repository/npm-group/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
+
+path-root-regex@^0.1.0:
+  version "0.1.2"
+  resolved "http://localhost:8888/repository/npm-group/path-root-regex/-/path-root-regex-0.1.2.tgz#bfccdc8df5b12dc52c8b43ec38d18d72c04ba96d"
+
+path-root@^0.1.1:
+  version "0.1.1"
+  resolved "http://localhost:8888/repository/npm-group/path-root/-/path-root-0.1.1.tgz#9a4a6814cac1c0cd73360a95f32083c8ea4745b7"
+  dependencies:
+    path-root-regex "^0.1.0"
+
+path-to-regexp@^1.7.0:
+  version "1.7.0"
+  resolved "http://localhost:8888/repository/npm-group/path-to-regexp/-/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+  dependencies:
+    isarray "0.0.1"
 
 path-type@^2.0.0:
   version "2.0.0"
@@ -4402,9 +5200,19 @@ pify@^3.0.0:
   version "3.0.0"
   resolved "http://localhost:8888/repository/npm-group/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
 
-pify@^4.0.1:
+pify@^4.0.0, pify@^4.0.1:
   version "4.0.1"
   resolved "http://localhost:8888/repository/npm-group/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
+
+pinkie-promise@^2.0.0:
+  version "2.0.1"
+  resolved "http://localhost:8888/repository/npm-group/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
+  dependencies:
+    pinkie "^2.0.0"
+
+pinkie@^2.0.0:
+  version "2.0.4"
+  resolved "http://localhost:8888/repository/npm-group/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
 pirates@^4.0.0, pirates@^4.0.1:
   version "4.0.1"
@@ -4431,6 +5239,18 @@ plist@^3.0.0, plist@^3.0.1:
     base64-js "^1.2.3"
     xmlbuilder "^9.0.7"
     xmldom "0.1.x"
+
+plop@^2.3.0:
+  version "2.3.0"
+  resolved "http://localhost:8888/repository/npm-group/plop/-/plop-2.3.0.tgz#e9b3ccf9d8fdbce077ee7377b75fcc5f511df562"
+  dependencies:
+    chalk "^1.1.3"
+    interpret "^1.2.0"
+    liftoff "^2.5.0"
+    minimist "^1.2.0"
+    node-plop "~0.18.0"
+    ora "^3.0.0"
+    v8flags "^2.0.10"
 
 plugin-error@^0.1.2:
   version "0.1.2"
@@ -4503,7 +5323,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "http://localhost:8888/repository/npm-group/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -4538,6 +5358,35 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "http://localhost:8888/repository/npm-group/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
+query-string@^6.4.2:
+  version "6.5.0"
+  resolved "http://localhost:8888/repository/npm-group/query-string/-/query-string-6.5.0.tgz#2e1a70125af01f6f04573692d02c09302a1d8bfc"
+  dependencies:
+    decode-uri-component "^0.2.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
+raf@^3.4.0:
+  version "3.4.1"
+  resolved "http://localhost:8888/repository/npm-group/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
+  dependencies:
+    performance-now "^2.1.0"
+
+railroad-diagrams@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
+
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "http://localhost:8888/repository/npm-group/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+
+randexp@0.4.6:
+  version "0.4.6"
+  resolved "http://localhost:8888/repository/npm-group/randexp/-/randexp-0.4.6.tgz#e986ad5e5e31dae13ddd6f7b3019aa7c87f60ca3"
+  dependencies:
+    discontinuous-range "1.0.0"
+    ret "~0.1.10"
+
 randomatic@^3.0.0:
   version "3.1.1"
   resolved "http://localhost:8888/repository/npm-group/randomatic/-/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
@@ -4559,6 +5408,13 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-addons-shallow-compare@15.6.2:
+  version "15.6.2"
+  resolved "http://localhost:8888/repository/npm-group/react-addons-shallow-compare/-/react-addons-shallow-compare-15.6.2.tgz#198a00b91fc37623db64a28fd17b596ba362702f"
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
 react-clone-referenced-element@^1.0.1:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/react-clone-referenced-element/-/react-clone-referenced-element-1.1.0.tgz#9cdda7f2aeb54fea791f3ab8c6ab96c7a77d0158"
@@ -4574,11 +5430,109 @@ react-devtools-core@^3.6.0:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4:
+react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "http://localhost:8888/repository/npm-group/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
 
-react-native@0.59.8:
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "http://localhost:8888/repository/npm-group/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-native-animatable@^1.3.2:
+  version "1.3.2"
+  resolved "http://localhost:8888/repository/npm-group/react-native-animatable/-/react-native-animatable-1.3.2.tgz#4783ee1a73dc98815aef234ce6b819f80bfe7d80"
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-camera@^2.9.0:
+  version "2.9.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-camera/-/react-native-camera-2.9.0.tgz#5ef94a535dbbfd215d672deef8d0c45bf06b1f3a"
+  dependencies:
+    prop-types "^15.6.2"
+
+react-native-communications@^2.2.1:
+  version "2.2.1"
+  resolved "http://localhost:8888/repository/npm-group/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
+
+react-native-gesture-handler@^1.2.1:
+  version "1.2.1"
+  resolved "http://localhost:8888/repository/npm-group/react-native-gesture-handler/-/react-native-gesture-handler-1.2.1.tgz#9c48fb1ab13d29cece24bbb77b1e847eebf27a2b"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+    invariant "^2.2.2"
+    prop-types "^15.5.10"
+
+react-native-linear-gradient@^2.5.4:
+  version "2.5.4"
+  resolved "http://localhost:8888/repository/npm-group/react-native-linear-gradient/-/react-native-linear-gradient-2.5.4.tgz#dce133526f5a5510a639af94544f1ed0c984bd1e"
+
+react-native-localize@^1.1.2:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/react-native-localize/-/react-native-localize-1.1.2.tgz#738b2b3bc86a9a451e0989f67b11ac289971b8b2"
+
+react-native-maps@^0.24.2:
+  version "0.24.2"
+  resolved "http://localhost:8888/repository/npm-group/react-native-maps/-/react-native-maps-0.24.2.tgz#19974f967cb0c2e24dab74ca879118e0932571b2"
+
+react-native-material-ripple@^0.8.0:
+  version "0.8.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-material-ripple/-/react-native-material-ripple-0.8.0.tgz#b8c24e6fdea2af2a21e8468b1f40b35483019e2f"
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-safe-area-view@^0.14.1:
+  version "0.14.3"
+  resolved "http://localhost:8888/repository/npm-group/react-native-safe-area-view/-/react-native-safe-area-view-0.14.3.tgz#3cc34d2fcc8886bc8a8bd1ab226d4345d02c23b0"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+"react-native-screens@^1.0.0 || ^1.0.0-alpha":
+  version "1.0.0-alpha.22"
+  resolved "http://localhost:8888/repository/npm-group/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
+
+react-native-side-menu@^1.1.3:
+  version "1.1.3"
+  resolved "http://localhost:8888/repository/npm-group/react-native-side-menu/-/react-native-side-menu-1.1.3.tgz#6ef5d2232ecf718312df6cedef019148bac3073a"
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-snap-carousel@muhamad-rizki/react-native-snap-carousel:
+  version "3.7.2"
+  resolved "https://codeload.github.com/muhamad-rizki/react-native-snap-carousel/tar.gz/c51f012c5775cf100b18fb5af0b192a9c1e0e0b9"
+  dependencies:
+    prop-types "^15.6.1"
+    react-addons-shallow-compare "15.6.2"
+
+react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.0:
+  version "1.4.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-tab-view/-/react-native-tab-view-1.4.0.tgz#c70a1f6a86a12bdb6e8b30c390afc751dfe41275"
+  dependencies:
+    prop-types "^15.6.1"
+
+react-native-tab-view@^2.3.0:
+  version "2.3.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-tab-view/-/react-native-tab-view-2.3.0.tgz#858a42a72cbf92e42e18169ad01522edbaa9c0cf"
+
+react-native-timeline-theme@muhamad-rizki/react-native-timeline-theme:
+  version "0.0.9"
+  resolved "https://codeload.github.com/muhamad-rizki/react-native-timeline-theme/tar.gz/a43d851cf763b06f45315aca14f252ac56f29406"
+
+react-native-vector-icons@^6.4.2:
+  version "6.4.2"
+  resolved "http://localhost:8888/repository/npm-group/react-native-vector-icons/-/react-native-vector-icons-6.4.2.tgz#ee0b097e783387544ed160a3192a437c097e551d"
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.6.2"
+    yargs "^13.2.2"
+
+react-native-webview@^6.0.1:
+  version "6.0.1"
+  resolved "http://localhost:8888/repository/npm-group/react-native-webview/-/react-native-webview-6.0.1.tgz#90f84877916e165d7209e5c557ef50ab8a2fca09"
+  dependencies:
+    escape-string-regexp "1.0.5"
+    invariant "2.2.4"
+
+react-native@^0.59.8:
   version "0.59.8"
   resolved "http://localhost:8888/repository/npm-group/react-native/-/react-native-0.59.8.tgz#ade4141c777c60f5ec4889d9811d0f80a9d56547"
   dependencies:
@@ -4633,12 +5587,56 @@ react-native@0.59.8:
     xmldoc "^0.4.0"
     yargs "^9.0.0"
 
+react-navigation-drawer@~1.2.1:
+  version "1.2.1"
+  resolved "http://localhost:8888/repository/npm-group/react-navigation-drawer/-/react-navigation-drawer-1.2.1.tgz#7bd5efeee7d2f611d3ebb0933e0c8e8eb7cafe52"
+  dependencies:
+    react-native-tab-view "^1.2.0"
+
+react-navigation-stack@~1.4.0:
+  version "1.4.0"
+  resolved "http://localhost:8888/repository/npm-group/react-navigation-stack/-/react-navigation-stack-1.4.0.tgz#69cdb029ea4ee5877d7e933b3117dc90bc841eb2"
+
+react-navigation-tabs@~1.1.3:
+  version "1.1.3"
+  resolved "http://localhost:8888/repository/npm-group/react-navigation-tabs/-/react-navigation-tabs-1.1.3.tgz#72dded7764cffc6b1de029cd1f0468da3976ed30"
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    react-native-tab-view "^1.4.0"
+
+react-navigation-transitions@muhamad-rizki/react-navigation-transitions:
+  version "1.0.10"
+  resolved "https://codeload.github.com/muhamad-rizki/react-navigation-transitions/tar.gz/a1c32bc0ca595e37bd664b919d4a093fc34193dd"
+
+react-navigation@^3.10.1:
+  version "3.10.1"
+  resolved "http://localhost:8888/repository/npm-group/react-navigation/-/react-navigation-3.10.1.tgz#c1514bd222ac8b02487f94375ad25f323d85bf61"
+  dependencies:
+    "@react-navigation/core" "~3.4.1"
+    "@react-navigation/native" "~3.5.0"
+    react-navigation-drawer "~1.2.1"
+    react-navigation-stack "~1.4.0"
+    react-navigation-tabs "~1.1.3"
+
 react-proxy@^1.1.7:
   version "1.1.8"
   resolved "http://localhost:8888/repository/npm-group/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
   dependencies:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
+
+react-redux@^7.0.3:
+  version "7.0.3"
+  resolved "http://localhost:8888/repository/npm-group/react-redux/-/react-redux-7.0.3.tgz#983c5a6de81cb1e696bd1c090ba826545f9170f1"
+  dependencies:
+    "@babel/runtime" "^7.4.3"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
+    loose-envify "^1.4.0"
+    prop-types "^15.7.2"
+    react-is "^16.8.6"
 
 react-test-renderer@16.8.3:
   version "16.8.3"
@@ -4707,11 +5705,42 @@ readable-stream@^2.0.1, readable-stream@^2.0.6, readable-stream@^2.2.2, readable
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
+readable-stream@^3.1.1:
+  version "3.3.0"
+  resolved "http://localhost:8888/repository/npm-group/readable-stream/-/readable-stream-3.3.0.tgz#cb8011aad002eb717bf040291feba8569c986fb9"
+  dependencies:
+    inherits "^2.0.3"
+    string_decoder "^1.1.1"
+    util-deprecate "^1.0.1"
+
 realpath-native@^1.1.0:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/realpath-native/-/realpath-native-1.1.0.tgz#2003294fea23fb0672f2476ebe22fcf498a2d65c"
   dependencies:
     util.promisify "^1.0.0"
+
+rechoir@^0.6.2:
+  version "0.6.2"
+  resolved "http://localhost:8888/repository/npm-group/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
+  dependencies:
+    resolve "^1.1.6"
+
+redux-persist@^5.10.0:
+  version "5.10.0"
+  resolved "http://localhost:8888/repository/npm-group/redux-persist/-/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"
+
+redux-saga@^1.0.2:
+  version "1.0.2"
+  resolved "http://localhost:8888/repository/npm-group/redux-saga/-/redux-saga-1.0.2.tgz#0599703f975438f1b2f9d2b9a965ec58f0fdfcd7"
+  dependencies:
+    "@redux-saga/core" "^1.0.2"
+
+"redux@>=0.10 <5", redux@^4.0.1:
+  version "4.0.1"
+  resolved "http://localhost:8888/repository/npm-group/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
 
 regenerate-unicode-properties@^8.0.2:
   version "8.1.0"
@@ -4844,6 +5873,13 @@ resolve-cwd@^2.0.0:
   dependencies:
     resolve-from "^3.0.0"
 
+resolve-dir@^1.0.0, resolve-dir@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/resolve-dir/-/resolve-dir-1.0.1.tgz#79a40644c362be82f26effe739c9bb5382046f43"
+  dependencies:
+    expand-tilde "^2.0.0"
+    global-modules "^1.0.0"
+
 resolve-from@^3.0.0:
   version "3.0.0"
   resolved "http://localhost:8888/repository/npm-group/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
@@ -4860,9 +5896,9 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "http://localhost:8888/repository/npm-group/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.10.0, resolve@^1.10.1, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1:
-  version "1.10.1"
-  resolved "http://localhost:8888/repository/npm-group/resolve/-/resolve-1.10.1.tgz#664842ac960795bbe758221cdccda61fb64b5f18"
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.2.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1:
+  version "1.11.0"
+  resolved "http://localhost:8888/repository/npm-group/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
   dependencies:
     path-parse "^1.0.6"
 
@@ -4877,7 +5913,7 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "http://localhost:8888/repository/npm-group/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
-rimraf@2.6.3, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.3:
+rimraf@2.6.3, rimraf@^2.2.8, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.3:
   version "2.6.3"
   resolved "http://localhost:8888/repository/npm-group/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
   dependencies:
@@ -4886,6 +5922,20 @@ rimraf@2.6.3, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.3:
 rimraf@~2.2.6:
   version "2.2.8"
   resolved "http://localhost:8888/repository/npm-group/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
+
+rn-sliding-up-panel@^2.2.0:
+  version "2.2.0"
+  resolved "http://localhost:8888/repository/npm-group/rn-sliding-up-panel/-/rn-sliding-up-panel-2.2.0.tgz#e724041c39297d174f46248762c0ad58bd0738d5"
+  dependencies:
+    clamp "^1.0.1"
+    prop-types "^15.7.2"
+
+rst-selector-parser@^2.2.3:
+  version "2.2.3"
+  resolved "http://localhost:8888/repository/npm-group/rst-selector-parser/-/rst-selector-parser-2.2.3.tgz#81b230ea2fcc6066c89e3472de794285d9b03d91"
+  dependencies:
+    lodash.flattendeep "^4.4.0"
+    nearley "^2.7.10"
 
 rsvp@^3.3.3:
   version "3.6.2"
@@ -5002,6 +6052,13 @@ send@0.17.1:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
+sentence-case@^2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/sentence-case/-/sentence-case-2.1.1.tgz#1f6e2dda39c168bf92d13f86d4a918933f667ed4"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case-first "^1.1.2"
+
 serialize-error@^2.1.0:
   version "2.1.0"
   resolved "http://localhost:8888/repository/npm-group/serialize-error/-/serialize-error-2.1.0.tgz#50b679d5635cdf84667bdc8e59af4e5b81d5f60a"
@@ -5084,6 +6141,10 @@ sisteransi@^1.0.0:
   version "1.0.0"
   resolved "http://localhost:8888/repository/npm-group/sisteransi/-/sisteransi-1.0.0.tgz#77d9622ff909080f1c19e5f4a1df0c1b0a27b88c"
 
+slash@^1.0.0:
+  version "1.0.0"
+  resolved "http://localhost:8888/repository/npm-group/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
 slash@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
@@ -5099,6 +6160,12 @@ slice-ansi@^2.1.0:
 slide@^1.1.5:
   version "1.1.6"
   resolved "http://localhost:8888/repository/npm-group/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+
+snake-case@^2.1.0:
+  version "2.1.0"
+  resolved "http://localhost:8888/repository/npm-group/snake-case/-/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"
+  dependencies:
+    no-case "^2.2.0"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -5178,6 +6245,10 @@ spdx-license-ids@^3.0.0:
   version "3.0.4"
   resolved "http://localhost:8888/repository/npm-group/spdx-license-ids/-/spdx-license-ids-3.0.4.tgz#75ecd1a88de8c184ef015eafb51b5b48bfd11bb1"
 
+split-on-first@^1.0.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "http://localhost:8888/repository/npm-group/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -5235,6 +6306,10 @@ stream-buffers@~2.2.0:
   version "2.2.0"
   resolved "http://localhost:8888/repository/npm-group/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
 
+strict-uri-encode@^2.0.0:
+  version "2.0.0"
+  resolved "http://localhost:8888/repository/npm-group/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+
 string-length@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
@@ -5257,13 +6332,27 @@ string-width@^1.0.1:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
-string-width@^3.0.0:
+string-width@^3.0.0, string-width@^3.1.0:
   version "3.1.0"
   resolved "http://localhost:8888/repository/npm-group/string-width/-/string-width-3.1.0.tgz#22767be21b62af1081574306f69ac51b62203961"
   dependencies:
     emoji-regex "^7.0.1"
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.1.0"
+
+string.prototype.trim@^1.1.2:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/string.prototype.trim/-/string.prototype.trim-1.1.2.tgz#d04de2c89e137f4d7d206f086b5ed2fae6be8cea"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.5.0"
+    function-bind "^1.0.2"
+
+string_decoder@^1.1.1:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/string_decoder/-/string_decoder-1.2.0.tgz#fe86e738b19544afe70469243b2a1ee9240eae8d"
+  dependencies:
+    safe-buffer "~5.1.0"
 
 string_decoder@~1.1.1:
   version "1.1.1"
@@ -5283,7 +6372,7 @@ strip-ansi@^4.0.0:
   dependencies:
     ansi-regex "^3.0.0"
 
-strip-ansi@^5.0.0, strip-ansi@^5.1.0:
+strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   version "5.2.0"
   resolved "http://localhost:8888/repository/npm-group/strip-ansi/-/strip-ansi-5.2.0.tgz#8c9a536feb6afc962bdfa5b104a5091c1ad9c0ae"
   dependencies:
@@ -5316,6 +6405,17 @@ supports-color@^6.1.0:
   resolved "http://localhost:8888/repository/npm-group/supports-color/-/supports-color-6.1.0.tgz#0764abc69c63d5ac842dd4867e8d025e880df8f3"
   dependencies:
     has-flag "^3.0.0"
+
+swap-case@^1.1.0:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/swap-case/-/swap-case-1.1.2.tgz#c39203a4587385fad3c850a0bd1bcafa081974e3"
+  dependencies:
+    lower-case "^1.1.1"
+    upper-case "^1.1.1"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "http://localhost:8888/repository/npm-group/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 symbol-tree@^3.2.2:
   version "3.2.2"
@@ -5380,6 +6480,17 @@ through@^2.3.6:
 time-stamp@^1.0.0:
   version "1.1.0"
   resolved "http://localhost:8888/repository/npm-group/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
+
+tinycolor2@^1.4.1:
+  version "1.4.1"
+  resolved "http://localhost:8888/repository/npm-group/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
+
+title-case@^2.1.0:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/title-case/-/title-case-2.1.1.tgz#3e127216da58d2bc5becf137ab91dae3a7cd8faa"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case "^1.0.3"
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -5473,6 +6584,22 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "http://localhost:8888/repository/npm-group/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typescript-compare@^0.0.2:
+  version "0.0.2"
+  resolved "http://localhost:8888/repository/npm-group/typescript-compare/-/typescript-compare-0.0.2.tgz#7ee40a400a406c2ea0a7e551efd3309021d5f425"
+  dependencies:
+    typescript-logic "^0.0.0"
+
+typescript-logic@^0.0.0:
+  version "0.0.0"
+  resolved "http://localhost:8888/repository/npm-group/typescript-logic/-/typescript-logic-0.0.0.tgz#66ebd82a2548f2b444a43667bec120b496890196"
+
+typescript-tuple@^2.1.0:
+  version "2.2.1"
+  resolved "http://localhost:8888/repository/npm-group/typescript-tuple/-/typescript-tuple-2.2.1.tgz#7d9813fb4b355f69ac55032e0363e8bb0f04dad2"
+  dependencies:
+    typescript-compare "^0.0.2"
+
 ua-parser-js@^0.7.18:
   version "0.7.19"
   resolved "http://localhost:8888/repository/npm-group/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
@@ -5485,8 +6612,8 @@ uglify-es@^3.1.9:
     source-map "~0.6.1"
 
 uglify-js@^3.1.4:
-  version "3.5.12"
-  resolved "http://localhost:8888/repository/npm-group/uglify-js/-/uglify-js-3.5.12.tgz#6b759cabc08c3e91fe82323d6387019f0c5864cd"
+  version "3.5.13"
+  resolved "http://localhost:8888/repository/npm-group/uglify-js/-/uglify-js-3.5.13.tgz#d2d8857b598d77f8764ae3bfcf90bb1df134d2bd"
   dependencies:
     commander "~2.20.0"
     source-map "~0.6.1"
@@ -5498,6 +6625,10 @@ ultron@1.0.x:
 ultron@~1.1.0:
   version "1.1.1"
   resolved "http://localhost:8888/repository/npm-group/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
+
+unc-path-regex@^0.1.2:
+  version "0.1.2"
+  resolved "http://localhost:8888/repository/npm-group/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -5542,6 +6673,16 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
+upper-case-first@^1.1.0, upper-case-first@^1.1.2:
+  version "1.1.2"
+  resolved "http://localhost:8888/repository/npm-group/upper-case-first/-/upper-case-first-1.1.2.tgz#5d79bedcff14419518fd2edb0a0507c9b6859115"
+  dependencies:
+    upper-case "^1.1.1"
+
+upper-case@^1.0.3, upper-case@^1.1.0, upper-case@^1.1.1, upper-case@^1.1.3:
+  version "1.1.3"
+  resolved "http://localhost:8888/repository/npm-group/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
+
 uri-js@^4.2.2:
   version "4.2.2"
   resolved "http://localhost:8888/repository/npm-group/uri-js/-/uri-js-4.2.2.tgz#94c540e1ff772956e2299507c010aea6c8838eb0"
@@ -5556,7 +6697,11 @@ use@^3.1.0:
   version "3.1.1"
   resolved "http://localhost:8888/repository/npm-group/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
 
-util-deprecate@~1.0.1:
+user-home@^1.1.1:
+  version "1.1.1"
+  resolved "http://localhost:8888/repository/npm-group/user-home/-/user-home-1.1.1.tgz#2b5be23a32b63a7c9deb8d0f28d485724a3df190"
+
+util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "http://localhost:8888/repository/npm-group/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
@@ -5574,6 +6719,12 @@ utils-merge@1.0.1:
 uuid@^3.3.2:
   version "3.3.2"
   resolved "http://localhost:8888/repository/npm-group/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+
+v8flags@^2.0.10:
+  version "2.1.1"
+  resolved "http://localhost:8888/repository/npm-group/v8flags/-/v8flags-2.1.1.tgz#aab1a1fa30d45f88dd321148875ac02c0b55e5b4"
+  dependencies:
+    user-home "^1.1.1"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
@@ -5613,6 +6764,12 @@ watch@~0.18.0:
     exec-sh "^0.2.0"
     minimist "^1.2.0"
 
+wcwidth@^1.0.1:
+  version "1.0.1"
+  resolved "http://localhost:8888/repository/npm-group/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
+  dependencies:
+    defaults "^1.0.3"
+
 webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "http://localhost:8888/repository/npm-group/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
@@ -5651,7 +6808,7 @@ which-module@^2.0.0:
   version "2.0.0"
   resolved "http://localhost:8888/repository/npm-group/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
 
-which@^1.2.9, which@^1.3.0:
+which@^1.2.14, which@^1.2.9, which@^1.3.0:
   version "1.3.1"
   resolved "http://localhost:8888/repository/npm-group/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   dependencies:
@@ -5677,6 +6834,14 @@ wrap-ansi@^2.0.0:
   dependencies:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
+
+wrap-ansi@^5.1.0:
+  version "5.1.0"
+  resolved "http://localhost:8888/repository/npm-group/wrap-ansi/-/wrap-ansi-5.1.0.tgz#1fd1f67235d5b6d0fee781056001bfb694c03b09"
+  dependencies:
+    ansi-styles "^3.2.0"
+    string-width "^3.0.0"
+    strip-ansi "^5.0.0"
 
 wrappy@1:
   version "1.0.2"
@@ -5762,7 +6927,7 @@ y18n@^3.2.1:
   version "3.2.1"
   resolved "http://localhost:8888/repository/npm-group/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
 
-"y18n@^3.2.1 || ^4.0.0":
+"y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
   resolved "http://localhost:8888/repository/npm-group/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
 
@@ -5777,6 +6942,13 @@ yallist@^3.0.0, yallist@^3.0.2:
 yargs-parser@^11.1.1:
   version "11.1.1"
   resolved "http://localhost:8888/repository/npm-group/yargs-parser/-/yargs-parser-11.1.1.tgz#879a0865973bca9f6bab5cbdf3b1c67ec7d3bcf4"
+  dependencies:
+    camelcase "^5.0.0"
+    decamelize "^1.2.0"
+
+yargs-parser@^13.1.0:
+  version "13.1.0"
+  resolved "http://localhost:8888/repository/npm-group/yargs-parser/-/yargs-parser-13.1.0.tgz#7016b6dd03e28e1418a510e258be4bff5a31138f"
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
@@ -5803,6 +6975,22 @@ yargs@^12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
+
+yargs@^13.2.2:
+  version "13.2.4"
+  resolved "http://localhost:8888/repository/npm-group/yargs/-/yargs-13.2.4.tgz#0b562b794016eb9651b98bd37acf364aa5d6dc83"
+  dependencies:
+    cliui "^5.0.0"
+    find-up "^3.0.0"
+    get-caller-file "^2.0.1"
+    os-locale "^3.1.0"
+    require-directory "^2.1.1"
+    require-main-filename "^2.0.0"
+    set-blocking "^2.0.0"
+    string-width "^3.0.0"
+    which-module "^2.0.0"
+    y18n "^4.0.0"
+    yargs-parser "^13.1.0"
 
 yargs@^9.0.0:
   version "9.0.1"

@@ -3,6 +3,12 @@ package com.rnnkickstarter;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.cmcewen.blurview.BlurViewPackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
+import org.reactnative.camera.RNCameraPackage;
+import com.airbnb.android.react.maps.MapsPackage;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +28,13 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new BlurViewPackage(),
+            new RNCWebViewPackage(),
+            new RNCameraPackage(),
+            new MapsPackage(),
+            new RNLocalizePackage(),
+            new VectorIconsPackage()
       );
     }
 
