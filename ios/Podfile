@@ -37,8 +37,11 @@ target 'RNNKickStarter' do
   pod 'GoogleMaps'  # Remove this line if you don't want to support GoogleMaps on iOS
   pod 'Google-Maps-iOS-Utils' # Remove this line if you don't want to support GoogleMaps on iOS
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
-  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
   pod 'react-native-blur', :path => '../node_modules/@react-native-community/blur'
+
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
 end
 

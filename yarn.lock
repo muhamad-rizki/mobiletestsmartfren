@@ -5525,9 +5525,9 @@ react-native-vector-icons@^6.4.2:
     prop-types "^15.6.2"
     yargs "^13.2.2"
 
-react-native-webview@^6.0.1:
-  version "6.0.1"
-  resolved "http://localhost:8888/repository/npm-group/react-native-webview/-/react-native-webview-6.0.1.tgz#90f84877916e165d7209e5c557ef50ab8a2fca09"
+react-native-webview@5.8.0:
+  version "5.8.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-webview/-/react-native-webview-5.8.0.tgz#8959982fd5508c3dddec562202380f45d8094822"
   dependencies:
     escape-string-regexp "1.0.5"
     invariant "2.2.4"
