@@ -2,6 +2,27 @@ apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
+import groovy.json.JsonSlurper
+
+/* get version from package.json */
+def getNpmVersion() {
+    def inputFile = new File("../../package.json")
+    def packageJson = new JsonSlurper().parseText(inputFile.text)
+    return packageJson["version"]
+}
+
+/* get package name from package.json */
+def getNpmPackage() {
+    def inputFile = new File("../../package.json")
+    def packageJson = new JsonSlurper().parseText(inputFile.text)
+    return packageJson["name"]
+}
+
+/* calculated from git commits to give sequential integers */
+def getGitVersion() {
+    def process = "git rev-list master --first-parent --count".execute()
+    return process.text.toInteger()
+}
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -94,6 +115,12 @@ def enableSeparateBuildPerCPUArchitecture = true
  */
 def enableProguardInReleaseBuilds = false
 
+def packageName = getNpmPackage()
+
+def userVer = getNpmVersion()
+
+def googleVer = getGitVersion()
+
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   compileOptions {
@@ -109,12 +136,12 @@ android {
       }
   }
   defaultConfig {
-    applicationId "com.rnnkickstarter"
+    applicationId packageName
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode 1
+    versionCode googleVer
+    versionName userVer
     signingConfig signingConfigs.config
-    versionName "1.0"
     missingDimensionStrategy 'react-native-camera', 'general'
     renderscriptTargetApi 19
     renderscriptSupportModeEnabled true
