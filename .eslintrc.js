@@ -11,7 +11,8 @@ module.exports = {
       'comma-dangle': 'off',
       'linebreak-style': 'off',
       'react/prefer-stateless-function': 'off',
-      "no-underscore-dangle": "off",
+      'no-underscore-dangle': "off",
+      'no-unused-vars': 'warn',
     },
     'globals': {
       "fetch": false

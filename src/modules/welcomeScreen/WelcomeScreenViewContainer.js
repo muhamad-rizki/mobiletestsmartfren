@@ -1,8 +1,9 @@
 // @flow
 import { compose, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 
-import {{properCase name }}View from './{{properCase name }}View';
+import WelcomeScreenView from './WelcomeScreenView';
 
 export default compose(
   connect(
@@ -18,4 +19,4 @@ export default compose(
 
     },
   }),
-)({{properCase name }}View);
+)(withNavigation(WelcomeScreenView));
