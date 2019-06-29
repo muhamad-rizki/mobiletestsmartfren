@@ -6,21 +6,48 @@ type ActionType = {
   payload?: any,
 };
 
-export const initialState: HomeScreenStateType = {};
+export const initialState: HomeScreenStateType = {
+  index: 1,
+  routes: [
+    {
+      key: 'tvshows',
+      title: 'TV Shows',
+      icon: 'tv',
+      iconType: 'Feather',
+    },
+    {
+      key: 'movies',
+      title: 'Movies',
+      icon: 'film',
+      iconType: 'SimpleLineIcons',
+    },
+    {
+      key: 'account',
+      title: 'Account',
+      icon: 'user-o',
+      iconType: 'FontAwesome',
+    },
+  ]
+};
 
-export const ACTION = 'HomeScreenState/ACTION';
+export const ACTION_SET_TAB_INDEX = 'HomeScreenState/ACTION_SET_TAB_INDEX';
 
-export function actionCreator(): ActionType {
+export function setTabIndex(payload): ActionType {
   return {
-    type: ACTION,
+    type: ACTION_SET_TAB_INDEX,
+    payload,
   };
 }
 
-export default function HomeScreenStateReducer(state: HomeScreenStateType = initialState, action: ActionType): HomeScreenStateType {
+export default function HomeScreenStateReducer(
+  state: HomeScreenStateType = initialState,
+  action: ActionType,
+): HomeScreenStateType {
   switch (action.type) {
-    case ACTION:
+    case ACTION_SET_TAB_INDEX:
       return {
         ...state,
+        index: action.payload,
       };
     default:
       return state;
