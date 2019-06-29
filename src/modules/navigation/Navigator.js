@@ -6,6 +6,7 @@ import { Icon } from '../../components';
 import { colors, fonts } from '../../styles';
 import SplashScreenViewContainer from '../splashScreen/SplashScreenViewContainer';
 import AuthenticationViewContainer from '../authentication/AuthenticationViewContainer';
+import HomeScreenViewContainer from '../homeScreen/HomeScreenViewContainer';
 
 let currentIndex = 0;
 
@@ -19,6 +20,12 @@ const stackNavigator = createStackNavigator(
     },
     Authentication: {
       screen: AuthenticationViewContainer,
+      navigationOptions: {
+        header: null,
+      }
+    },
+    HomeScreen: {
+      screen: HomeScreenViewContainer,
       navigationOptions: {
         header: null,
       }
