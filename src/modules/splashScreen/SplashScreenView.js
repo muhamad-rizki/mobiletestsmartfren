@@ -20,8 +20,8 @@ export default (props: Props) => (
       resizeMode="center"
       source={icon}
     />
-    <Text marginT-24 h1 primary>LayarKaca21.id</Text>
-    <Text h2 primary>a one place to watch Movies and TV Show</Text>
+    <Text marginT-24 h1 secondary bold>LayarKaca21.id</Text>
+    <Text h2 secondaryLight>a one place catalog of Movies and TV Show</Text>
     <Text absoluteBottomSmall>{`Powered by TMDB - v${app.version}`}</Text>
   </View>
 );
