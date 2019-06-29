@@ -5660,6 +5660,12 @@ react-native-snap-carousel@^3.8.0:
     prop-types "^15.6.1"
     react-addons-shallow-compare "15.6.2"
 
+react-native-star-rating-view@^0.0.12:
+  version "0.0.12"
+  resolved "http://localhost:8888/repository/npm-group/react-native-star-rating-view/-/react-native-star-rating-view-0.0.12.tgz#85e5bca4f01169b1cf9150f82dd327bd4193eabe"
+  dependencies:
+    react-native-vector-icons "^4.0.0"
+
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.0:
   version "1.4.0"
   resolved "http://localhost:8888/repository/npm-group/react-native-tab-view/-/react-native-tab-view-1.4.0.tgz#c70a1f6a86a12bdb6e8b30c390afc751dfe41275"
@@ -5696,7 +5702,7 @@ react-native-ui-lib@3.24.2:
     semver "^5.5.0"
     url-parse "^1.2.0"
 
-react-native-vector-icons@^4.6.0:
+react-native-vector-icons@^4.0.0, react-native-vector-icons@^4.6.0:
   version "4.6.0"
   resolved "http://localhost:8888/repository/npm-group/react-native-vector-icons/-/react-native-vector-icons-4.6.0.tgz#e4014311ffa6de397d914ffc31b7097a874cc8d5"
   dependencies:
