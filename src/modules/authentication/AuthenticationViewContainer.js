@@ -11,10 +11,7 @@ export default compose(
   ),
   lifecycle({
     componentDidMount() {
-      const { navigation } = this.props;
-      setTimeout(() => {
-        ResetNavigator(navigation, 'WelcomeScreen');
-      }, 4000);
+
     },
   }),
 )(AuthenticationView);

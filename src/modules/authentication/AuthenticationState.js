@@ -16,7 +16,10 @@ export function actionCreator(): ActionType {
   };
 }
 
-export default function AuthenticationStateReducer(state: AuthenticationStateType = initialState, action: ActionType): AuthenticationStateType {
+export default function AuthenticationStateReducer(
+  state: AuthenticationStateType = initialState,
+  action: ActionType,
+): AuthenticationStateType {
   switch (action.type) {
     case ACTION:
       return {
