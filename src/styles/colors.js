@@ -9,6 +9,7 @@ const blueVersion = {
   profileGradientStart: '#54CBF6',
   profileGradientEnd: '#49D2D0',
   secondary: '#FF1358',
+  secondaryLight: '#ff4081',
   grey: '#acacac',
   gray: '#5f5f5f',
   darkGray: '#4d4d4d',
