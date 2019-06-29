@@ -8,8 +8,9 @@ import {
 
 describe('Icon Component', () => {
   it('renders as expected', () => {
-  const wrapper = shallow(
-    <Icon />,
-  );
-  expect(wrapper).toMatchSnapshot();
+    const wrapper = shallow(
+      <Icon />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
