@@ -1,4 +1,4 @@
-package com.rnnkickstarter;
+package id.layarkaca21;
 
 import android.app.Application;
 
