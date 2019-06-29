@@ -5498,9 +5498,17 @@ react-native-communications@^2.2.1:
   version "2.2.1"
   resolved "http://localhost:8888/repository/npm-group/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
 
-react-native-gesture-handler@^1.1.0, react-native-gesture-handler@^1.2.1:
+react-native-gesture-handler@^1.1.0:
   version "1.2.1"
   resolved "http://localhost:8888/repository/npm-group/react-native-gesture-handler/-/react-native-gesture-handler-1.2.1.tgz#9c48fb1ab13d29cece24bbb77b1e847eebf27a2b"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+    invariant "^2.2.2"
+    prop-types "^15.5.10"
+
+react-native-gesture-handler@^1.3.0:
+  version "1.3.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-gesture-handler/-/react-native-gesture-handler-1.3.0.tgz#d0386f565928ccc1849537f03f2e37fd5f6ad43f"
   dependencies:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.2"
@@ -5539,6 +5547,10 @@ react-native-modal-dropdown@^0.7.0:
 react-native-reanimated@^1.0.0-alpha.12:
   version "1.0.1"
   resolved "http://localhost:8888/repository/npm-group/react-native-reanimated/-/react-native-reanimated-1.0.1.tgz#5ecb6a2f6dad0351077ac9b771ca943b7ad6feda"
+
+react-native-reanimated@^1.1.0:
+  version "1.1.0"
+  resolved "http://localhost:8888/repository/npm-group/react-native-reanimated/-/react-native-reanimated-1.1.0.tgz#ba6864055ec3a206cdd5209a293fe653ce276206"
 
 react-native-safe-area-view@^0.14.1:
   version "0.14.3"
