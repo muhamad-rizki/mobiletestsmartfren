@@ -38,6 +38,7 @@ export default (props: Props) => {
       />
       <View flex>
         <TabView
+          swipeEnabled={false}
           removeClippedSubviews
           navigationState={props}
           renderScene={SceneMapper}
