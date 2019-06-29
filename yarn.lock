@@ -5575,6 +5575,10 @@ react-native-communications@^2.2.1:
   version "2.2.1"
   resolved "http://localhost:8888/repository/npm-group/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
 
+react-native-fast-image@^6.0.5:
+  version "6.0.5"
+  resolved "http://localhost:8888/repository/npm-group/react-native-fast-image/-/react-native-fast-image-6.0.5.tgz#c0b55bedd53571fa0850caaa256b5fad68c44487"
+
 react-native-gesture-handler@^1.1.0:
   version "1.2.1"
   resolved "http://localhost:8888/repository/npm-group/react-native-gesture-handler/-/react-native-gesture-handler-1.2.1.tgz#9c48fb1ab13d29cece24bbb77b1e847eebf27a2b"

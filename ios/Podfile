@@ -47,6 +47,8 @@ target 'RNNKickStarter' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'react-native-fast-image', :path => '../node_modules/react-native-fast-image'
+
 end
 
 post_install do |installer|
