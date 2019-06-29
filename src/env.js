@@ -1,4 +1,13 @@
-import { StackActions, NavigationActions } from 'react-navigation';
+import { Dimensions } from 'react-native';
+import { NavigationActions } from 'react-navigation';
+
+export const API_KEY = '12e3ae17c21d7ca174b3e36a23124075';
+
+export const BASE_URL_V3 = 'https://api.themoviedb.org/3/';
+
+export const BASE_URL_V4 = 'https://api.themoviedb.org/3/';
+
+export const WINDOW = Dimensions.get('window');
 
 export const TEST_CONST = '';
 
