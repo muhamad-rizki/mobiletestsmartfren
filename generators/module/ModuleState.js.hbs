@@ -16,7 +16,10 @@ export function actionCreator(): ActionType {
   };
 }
 
-export default function {{properCase name }}StateReducer(state: {{properCase name }}StateType = initialState, action: ActionType): {{properCase name }}StateType {
+export default function {{properCase name }}StateReducer(
+  state: {{properCase name }}StateType = initialState,
+  action: ActionType,
+): {{properCase name }}StateType {
   switch (action.type) {
     case ACTION:
       return {
