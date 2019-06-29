@@ -48,8 +48,8 @@ const renderNowPlaying = (data: NowPlayingData) => {
   return (
     <View
       style={{
-        height: 300,
-        width: 200,
+        height: 250,
+        width: 150,
       }}
       centerV
       centerH
@@ -57,15 +57,70 @@ const renderNowPlaying = (data: NowPlayingData) => {
       <ShimmerPlaceHolder
         autoRun
         visible={!loadingNowPlaying}
-        width={200}
-        height={300}
+        width={150}
+        height={250}
         style={{ alignSelf: 'center' }}
       >
         <Image
-          onLoadEnd={() => setNPLoading(false)}
+          onLoadEnd={() => nowPlayingIndex === (index - 5) && setNPLoading(false)}
           style={{
-            width: 200,
-            height: 300,
+            width: 150,
+            height: 250,
+          }}
+          resizeMode={Image.resizeMode.cover}
+          source={{ uri: `${imgUrl}/w342/${item.poster_path}` }}
+        />
+      </ShimmerPlaceHolder>
+    </View>
+  );
+};
+
+const renderPopular = (data: NowPlayingData) => {
+  const {
+    item,
+    index,
+    imgUrl,
+    popularIndex,
+    loadingPopular,
+    setPopLoading,
+    lists,
+  } = data;
+  return (
+    <View
+      style={{
+        height: 150,
+        width: 100,
+      }}
+      centerV
+      centerH
+    >
+      <View
+        paddingH-4
+        paddingV-2
+        style={{
+          backgroundColor: colors.yellow,
+          position: 'absolute',
+          top: 10,
+          left: 0,
+          borderTopRightRadius: 20,
+          borderBottomRightRadius: 20,
+          zIndex: 2
+        }}
+      >
+        <Text black small>{`#${lists.findIndex(list => list.id === item.id) + 1}`}</Text>
+      </View>
+      <ShimmerPlaceHolder
+        autoRun
+        visible={!loadingPopular}
+        width={100}
+        height={150}
+        style={{ alignSelf: 'center' }}
+      >
+        <Image
+          onLoadEnd={() => popularIndex === (index - 5) && setPopLoading(false)}
+          style={{
+            width: 100,
+            height: 150,
           }}
           resizeMode={Image.resizeMode.cover}
           source={{ uri: `${imgUrl}/w342/${item.poster_path}` }}
@@ -84,27 +139,89 @@ export default (props: Props) => {
     genres,
     setNPLoading,
     loadingNowPlaying,
+    popular,
+    popularIndex,
+    loadingPopular,
+    setPopIndex,
+    setPopLoading,
   } = props;
   return (
     <ScrollView>
       <View>
         <View
           padding-8
-          marginV-16
+          marginT-16
+          marginB-8
+          style={{
+            backgroundColor: colors.green,
+          }}
+        >
+          <Text>Today&apos;s Popular</Text>
+        </View>
+        {
+          popular.results.length > 1
+            ? (
+              <View style={{ height: 150 }}>
+                <Carousel
+                  loop
+                  data={popular.results}
+                  loopClonesPerSide={5}
+                  onSnapToItem={setPopIndex}
+                  enableSnap
+                  renderItem={({ item, index }) => renderPopular({
+                    item,
+                    index,
+                    imgUrl,
+                    popularIndex,
+                    setPopLoading,
+                    loadingPopular,
+                    lists: popular.results,
+                  })}
+                  autoplay
+                  autoplayInterval={5000}
+                  sliderWidth={WINDOW.width}
+                  itemWidth={100}
+                  contentContainerCustomStyle={{
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}
+                  inactiveSlideOpacity={0.3}
+                  inactiveSlideScale={1}
+                  removeClippedSubviews
+                  lockScrollWhileSnapping
+                  directionalLockEnabled
+                  horizontal
+                />
+              </View>
+            )
+            : (
+              <ShimmerPlaceHolder
+                autoRun
+                visible={popular.results.length > 0}
+                width={WINDOW.width}
+                height={150}
+                style={{ alignSelf: 'center' }}
+              />
+            )
+        }
+        <View
+          padding-8
+          marginT-16
+          marginB-8
           style={{
             backgroundColor: colors.yellow,
           }}
         >
           <Text>Now Playing</Text>
         </View>
-        <View style={{ height: 300 }}>
+        <View style={{ height: 250 }}>
           {
             nowPlaying.results.length > 1
               ? (
                 <Carousel
                   loop
-                  data={nowPlaying.results}
-                  loopClonesPerSide={nowPlaying.results.length + 1}
+                  data={nowPlaying.results.slice(0, 10)}
+                  loopClonesPerSide={5}
                   onSnapToItem={setNPIndex}
                   enableSnap
                   renderItem={({ item, index }) => renderNowPlaying({
@@ -116,12 +233,11 @@ export default (props: Props) => {
                     loadingNowPlaying,
                   })}
                   sliderWidth={WINDOW.width}
-                  itemWidth={200}
+                  itemWidth={150}
                   contentContainerCustomStyle={{
                     justifyContent: 'center',
                     alignItems: 'center'
                   }}
-                  shouldOptimizeUpdates
                   removeClippedSubviews
                   lockScrollWhileSnapping
                   directionalLockEnabled
@@ -132,8 +248,8 @@ export default (props: Props) => {
                 <ShimmerPlaceHolder
                   autoRun
                   visible={nowPlaying.results.length > 0}
-                  width={200}
-                  height={300}
+                  width={150}
+                  height={250}
                   style={{ alignSelf: 'center' }}
                 />
               )
@@ -159,7 +275,7 @@ export default (props: Props) => {
                 accurateHalfStars
               />
               <Text h2 bold>
-                {`${nowPlaying.results.length <= 0 ? '' : nowPlaying.results[nowPlayingIndex].vote_average}`}
+                {`${nowPlaying.results.length <= 0 ? '' : nowPlaying.results[nowPlayingIndex].vote_average.toFixed(1)}`}
               </Text>
             </View>
           </ShimmerPlaceHolder>

@@ -116,6 +116,10 @@ Typography.loadTypographies({
   defaultLight: {
     fontFamily: fonts.primary,
   },
+  small: {
+    fontFamily: fonts.primary,
+    fontSize: 11,
+  },
   absoluteBottomSmall: {
     position: 'absolute',
     bottom: 16,

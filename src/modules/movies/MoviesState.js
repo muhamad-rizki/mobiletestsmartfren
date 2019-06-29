@@ -12,16 +12,25 @@ export const initialState: MoviesStateType = {
   nowPlaying: {
     results: [],
     page: 1,
-    total_results: 0,
-    total_pages: 1,
   },
   nowPlayingIndex: 0,
+  loadingPopular: true,
+  popularError: 200,
+  popular: {
+    results: [],
+    page: 1,
+  },
+  popularIndex: 0,
 };
 
 export const ACTION_NOW_PLAYING_SET_LOADING = 'MoviesState/ACTION_NOW_PLAYING_SET_LOADING';
 export const ACTION_NOW_PLAYING_SET_ERROR = 'MoviesState/ACTION_NOW_PLAYING_SET_ERROR';
 export const ACTION_NOW_PLAYING_SET_DATA = 'MoviesState/ACTION_NOW_PLAYING_SET_DATA';
 export const ACTION_NOW_PLAYING_SET_INDEX = 'MoviesState/ACTION_NOW_PLAYING_SET_INDEX';
+export const ACTION_POPULAR_SET_LOADING = 'MoviesState/ACTION_POPULAR_SET_LOADING';
+export const ACTION_POPULAR_SET_ERROR = 'MoviesState/ACTION_POPULAR_SET_ERROR';
+export const ACTION_POPULAR_SET_DATA = 'MoviesState/ACTION_POPULAR_SET_DATA';
+export const ACTION_POPULAR_SET_INDEX = 'MoviesState/ACTION_POPULAR_SET_INDEX';
 
 export function setNowPlayingLoading(payload): ActionType {
   return {
@@ -75,6 +84,26 @@ export default function MoviesStateReducer(
       return {
         ...state,
         nowPlayingIndex: action.payload,
+      };
+    case ACTION_POPULAR_SET_LOADING:
+      return {
+        ...state,
+        loadingPopular: action.payload,
+      };
+    case ACTION_POPULAR_SET_ERROR:
+      return {
+        ...state,
+        popularError: action.payload,
+      };
+    case ACTION_POPULAR_SET_DATA:
+      return {
+        ...state,
+        popular: action.payload,
+      };
+    case ACTION_POPULAR_SET_INDEX:
+      return {
+        ...state,
+        popularIndex: action.payload,
       };
     default:
       return state;
