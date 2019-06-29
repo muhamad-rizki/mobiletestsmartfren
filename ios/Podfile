@@ -45,6 +45,8 @@ target 'RNNKickStarter' do
 
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
 end
 
 post_install do |installer|

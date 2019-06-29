@@ -3,6 +3,7 @@ package id.layarkaca21;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.cmcewen.blurview.BlurViewPackage;
@@ -30,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new LinearGradientPackage(),
             new ReanimatedPackage(),
             new RNGestureHandlerPackage(),
             new BlurViewPackage(),
