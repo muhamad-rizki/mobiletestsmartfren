@@ -30,7 +30,7 @@ const enhancer = composeEnhancers(...enhancers);
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['authentication'],
+  whitelist: ['app', 'authentication'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
