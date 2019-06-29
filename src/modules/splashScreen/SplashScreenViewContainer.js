@@ -23,7 +23,14 @@ export default compose(
   lifecycle({
     componentWillMount() {
       const { setConfig, setInetStatus } = this.props;
-      new InvokeHelper().getConfiguration()
+      const api = new InvokeHelper();
+      api.getConfiguration()
+        .then((response) => {
+          setConfig(response.data);
+          setInetStatus(200);
+        })
+        .catch((error: AxiosError) => setInetStatus(error.code));
+      api.getGenres()
         .then((response) => {
           setConfig(response.data);
           setInetStatus(200);

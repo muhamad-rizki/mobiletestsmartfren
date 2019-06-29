@@ -12,6 +12,8 @@ type ActionType = {
 export const initialState: AppStateType = {
   isFirstOpen: true,
   internetStatus: 200,
+  images: {},
+  genres: [],
 };
 
 export const SET_FIRST_OPEN = 'AppState/SET_FIRST_OPEN';
