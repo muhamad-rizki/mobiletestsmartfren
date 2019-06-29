@@ -16,7 +16,10 @@ export function actionCreator(): ActionType {
   };
 }
 
-export default function SplashScreenStateReducer(state: SplashScreenStateType = initialState, action: ActionType): SplashScreenStateType {
+export default function SplashScreenStateReducer(
+  state: SplashScreenStateType = initialState,
+  action: ActionType,
+): SplashScreenStateType {
   switch (action.type) {
     case ACTION:
       return {
