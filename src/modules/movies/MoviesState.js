@@ -7,6 +7,13 @@ type ActionType = {
 };
 
 export const initialState: MoviesStateType = {
+  loadingUpcoming: true,
+  upcomingError: 200,
+  upcoming: {
+    results: [],
+    page: 1,
+  },
+  upcomingingIndex: 0,
   loadingNowPlaying: true,
   nowPlayingError: 200,
   nowPlaying: {
@@ -29,6 +36,10 @@ export const initialState: MoviesStateType = {
   },
 };
 
+export const ACTION_UPCOMING_SET_LOADING = 'MoviesState/ACTION_UPCOMING_SET_LOADING';
+export const ACTION_UPCOMING_SET_ERROR = 'MoviesState/ACTION_UPCOMING_SET_ERROR';
+export const ACTION_UPCOMING_SET_DATA = 'MoviesState/ACTION_UPCOMING_SET_DATA';
+export const ACTION_UPCOMING_SET_INDEX = 'MoviesState/ACTION_UPCOMING_SET_INDEX';
 export const ACTION_NOW_PLAYING_SET_LOADING = 'MoviesState/ACTION_NOW_PLAYING_SET_LOADING';
 export const ACTION_NOW_PLAYING_SET_ERROR = 'MoviesState/ACTION_NOW_PLAYING_SET_ERROR';
 export const ACTION_NOW_PLAYING_SET_DATA = 'MoviesState/ACTION_NOW_PLAYING_SET_DATA';
@@ -74,6 +85,26 @@ export default function MoviesStateReducer(
   action: ActionType,
 ): MoviesStateType {
   switch (action.type) {
+    case ACTION_UPCOMING_SET_LOADING:
+      return {
+        ...state,
+        loadingUpcoming: action.payload,
+      };
+    case ACTION_UPCOMING_SET_ERROR:
+      return {
+        ...state,
+        upcomingError: action.payload,
+      };
+    case ACTION_UPCOMING_SET_DATA:
+      return {
+        ...state,
+        upcoming: action.payload,
+      };
+    case ACTION_UPCOMING_SET_INDEX:
+      return {
+        ...state,
+        upcomingingIndex: action.payload,
+      };
     case ACTION_NOW_PLAYING_SET_LOADING:
       return {
         ...state,

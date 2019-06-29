@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { Dimensions } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
@@ -18,4 +19,8 @@ export function ResetNavigator(navigation, routeName, params) {
 
 export function makeThousand(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
+export function isEmpty(obj, defaultObj) {
+  return _.isEmpty(obj) ? defaultObj : obj;
 }
