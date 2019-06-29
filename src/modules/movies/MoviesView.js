@@ -4,13 +4,14 @@ import {
   View,
   Text,
 } from 'react-native-ui-lib';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, FlatList, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import Image from 'react-native-fast-image';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder';
 import StarRatingBar from 'react-native-star-rating-view/StarRatingBar';
 import Carousel from 'react-native-snap-carousel';
-import { WINDOW } from '../../env';
+import { WINDOW, makeThousand } from '../../env';
 import { colors } from '../../styles';
+import { Icon } from '../../components';
 
 type NowPlaying = {
   vote_count: number,
@@ -123,9 +124,84 @@ const renderPopular = (data: NowPlayingData) => {
             height: 150,
           }}
           resizeMode={Image.resizeMode.cover}
-          source={{ uri: `${imgUrl}/w342/${item.poster_path}` }}
+          source={{ uri: `${imgUrl}/w92/${item.poster_path}` }}
         />
       </ShimmerPlaceHolder>
+    </View>
+  );
+};
+
+const renderTopRated = (data: NowPlayingData) => {
+  const {
+    item,
+    imgUrl,
+    loadingTopRated,
+    setTRLoading,
+    genres,
+    forceLoading,
+  } = data;
+  return (
+    <View style={{ flexDirection: 'row', }} padding-8>
+      <View paddingR-12 style={{ flex: 0.2 }}>
+        <ShimmerPlaceHolder
+          autoRun
+          visible={!loadingTopRated || !forceLoading}
+          height={130}
+          style={{
+            alignSelf: 'center',
+            flex: 1,
+            width: '100%',
+            marginHorizontal: 8,
+          }}
+        >
+          <Image
+            source={{ uri: `${imgUrl}/w92/${item.poster_path}` }}
+            onLoadEnd={() => !forceLoading && setTRLoading(false)}
+            style={{
+              width: 80,
+              height: 130,
+            }}
+            resizeMode={Image.resizeMode.cover}
+          />
+        </ShimmerPlaceHolder>
+      </View>
+      <View style={{ flex: 0.8 }}>
+        <ShimmerPlaceHolder
+          autoRun
+          visible={!forceLoading}
+          style={{ flex: 1, width: '100%' }}
+          height={130}
+        >
+          <Text>{item.title}</Text>
+          <Text lightGray>{item.genre_ids.map(genre => genres.find(g => g.id === genre).name).join(', ')}</Text>
+          <View style={{ flexDirection: 'row' }}>
+            <StarRatingBar
+              maximumValue={5}
+              score={item.vote_average / 2.0}
+              dontShowScore
+              allowsHalfStars
+              accurateHalfStars
+              spacing={2}
+              starStyle={{
+                width: 15,
+                height: 15,
+              }}
+            />
+            <Text>
+              {` • ${item.vote_average.toFixed(1)} from ${makeThousand(item.vote_count)} votes`}
+            </Text>
+          </View>
+          <TouchableWithoutFeedback>
+            <Text>
+              {`${item.overview.substring(0, 80)} ... `}
+              <Text primary>
+                {'Read More '}
+                <Icon name="chevron-double-right" type="MaterialCommunityIcons" />
+              </Text>
+            </Text>
+          </TouchableWithoutFeedback>
+        </ShimmerPlaceHolder>
+      </View>
     </View>
   );
 };
@@ -142,8 +218,10 @@ export default (props: Props) => {
     popular,
     popularIndex,
     loadingPopular,
-    setPopIndex,
     setPopLoading,
+    topRated,
+    loadingTopRated,
+    setTRLoading,
   } = props;
   return (
     <ScrollView>
@@ -205,7 +283,7 @@ export default (props: Props) => {
         }
         <View
           padding-8
-          marginT-16
+          marginT-32
           marginB-8
           style={{
             backgroundColor: colors.yellow,
@@ -289,6 +367,38 @@ export default (props: Props) => {
             </Text>
           </ShimmerPlaceHolder>
         </View>
+        <View
+          padding-8
+          marginT-16
+          marginB-8
+          style={{
+            backgroundColor: colors.red,
+          }}
+        >
+          <Text>Top Rated Movies</Text>
+        </View>
+        <FlatList
+          keyExtractor={item => item.id.toString()}
+          data={topRated.results.slice(0, 3)}
+          renderItem={({ item }) => renderTopRated({
+            item,
+            loadingTopRated,
+            setTRLoading,
+            imgUrl,
+            genres
+          })}
+          ListEmptyComponent={() => renderTopRated({
+            item: {
+              genre_ids: [],
+              vote_average: 0,
+              vote_count: 0,
+              overview: '',
+            },
+            forceLoading: true,
+            imgUrl,
+            loadingTopRated: true,
+          })}
+        />
       </View>
     </ScrollView>
   );

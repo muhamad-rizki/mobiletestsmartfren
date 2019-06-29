@@ -15,3 +15,7 @@ export function ResetNavigator(navigation, routeName, params) {
   const resetAction = NavigationActions.navigate({ routeName, params, key: null });
   navigation.dispatch(resetAction);
 }
+
+export function makeThousand(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}

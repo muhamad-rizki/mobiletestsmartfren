@@ -13,6 +13,9 @@ import {
   ACTION_POPULAR_SET_INDEX,
   ACTION_POPULAR_SET_ERROR,
   ACTION_POPULAR_SET_DATA,
+  ACTION_TOPRATED_SET_ERROR,
+  ACTION_TOPRATED_SET_LOADING,
+  ACTION_TOPRATED_SET_DATA,
 } from './MoviesState';
 
 export default compose(
@@ -57,10 +60,28 @@ export default compose(
             dispatch({ type: ACTION_POPULAR_SET_ERROR, payload: error.code });
           });
       },
+      getTopRated: () => {
+        // reset status
+        dispatch({ type: ACTION_TOPRATED_SET_ERROR, payload: 200 });
+        dispatch({ type: ACTION_TOPRATED_SET_LOADING, payload: true });
+        // invoke api get now playing
+        new InvokeHelper().getTopRatedMovies()
+          .then((response) => {
+            // clear status
+            dispatch({ type: ACTION_TOPRATED_SET_ERROR, payload: 200 });
+            // store data
+            dispatch({ type: ACTION_TOPRATED_SET_DATA, payload: response.data });
+          })
+          .catch((error) => {
+            // set error status
+            dispatch({ type: ACTION_TOPRATED_SET_ERROR, payload: error.code });
+          });
+      },
       setNPLoading: show => dispatch(setNowPlayingLoading(show)),
       setNPIndex: index => dispatch(setNowPlayingIndex(index)),
       setPopLoading: show => dispatch({ type: ACTION_POPULAR_SET_LOADING, payload: show }),
       setPopIndex: index => dispatch({ type: ACTION_POPULAR_SET_INDEX, payload: index }),
+      setTRLoading: show => dispatch({ type: ACTION_TOPRATED_SET_LOADING, payload: show }),
     }),
   ),
   lifecycle({
@@ -68,9 +89,11 @@ export default compose(
       const {
         getNowPlaying,
         getPopular,
+        getTopRated,
       } = this.props;
       getNowPlaying();
       getPopular();
+      getTopRated();
     },
   }),
 )(MoviesView);
