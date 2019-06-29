@@ -116,6 +116,12 @@ Typography.loadTypographies({
   defaultLight: {
     fontFamily: fonts.primary,
   },
+  absoluteBottomSmall: {
+    position: 'absolute',
+    bottom: 16,
+    fontFamily: fonts.primary,
+    fontSize: 11,
+  },
 });
 
 Assets.loadAssetsGroup('images', {});
@@ -124,4 +130,9 @@ Assets.loadAssetsGroup('icons', {});
 
 const scale = (size: number): number => (width / guidelineBaseWidth) * size;
 
-export { colors, fonts, scale, commonStyles };
+export {
+  colors,
+  fonts,
+  scale,
+  commonStyles,
+};
