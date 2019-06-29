@@ -166,7 +166,6 @@ export default (props: Props) => {
                   loop
                   data={popular.results}
                   loopClonesPerSide={5}
-                  onSnapToItem={setPopIndex}
                   enableSnap
                   renderItem={({ item, index }) => renderPopular({
                     item,
