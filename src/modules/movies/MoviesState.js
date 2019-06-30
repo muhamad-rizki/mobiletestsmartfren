@@ -34,6 +34,12 @@ export const initialState: MoviesStateType = {
     results: [],
     page: 1,
   },
+  loadingPopPerson: true,
+  popPersonError: 200,
+  popPerson: {
+    results: [],
+    page: 1,
+  },
 };
 
 export const ACTION_UPCOMING_SET_LOADING = 'MoviesState/ACTION_UPCOMING_SET_LOADING';
@@ -51,6 +57,9 @@ export const ACTION_POPULAR_SET_INDEX = 'MoviesState/ACTION_POPULAR_SET_INDEX';
 export const ACTION_TOPRATED_SET_LOADING = 'MoviesState/ACTION_TOPRATED_SET_LOADING';
 export const ACTION_TOPRATED_SET_ERROR = 'MoviesState/ACTION_TOPRATED_SET_ERROR';
 export const ACTION_TOPRATED_SET_DATA = 'MoviesState/ACTION_TOPRATED_SET_DATA';
+export const ACTION_POPPERSON_SET_LOADING = 'MoviesState/ACTION_POPPERSON_SET_LOADING';
+export const ACTION_POPPERSON_SET_ERROR = 'MoviesState/ACTION_POPPERSON_SET_ERROR';
+export const ACTION_POPPERSON_SET_DATA = 'MoviesState/ACTION_POPPERSON_SET_DATA';
 
 export function setNowPlayingLoading(payload): ActionType {
   return {
@@ -159,6 +168,21 @@ export default function MoviesStateReducer(
       return {
         ...state,
         topRated: action.payload,
+      };
+    case ACTION_POPPERSON_SET_LOADING:
+      return {
+        ...state,
+        loadingPopPerson: action.payload,
+      };
+    case ACTION_POPPERSON_SET_ERROR:
+      return {
+        ...state,
+        popPersonError: action.payload,
+      };
+    case ACTION_POPPERSON_SET_DATA:
+      return {
+        ...state,
+        popPerson: action.payload,
       };
     default:
       return state;

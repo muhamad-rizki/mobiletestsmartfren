@@ -23,4 +23,6 @@ export default class InvokeHelper {
   getTopRatedMovies = page => this.api.get(`${BASE_URL_V3}movie/top_rated?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
   getUpcomingMovies = page => this.api.get(`${BASE_URL_V3}movie/upcoming?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+
+  getPopularPeoples = page => this.api.get(`${BASE_URL_V3}person/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 }

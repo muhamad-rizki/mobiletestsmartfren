@@ -3,6 +3,9 @@ import React from 'react';
 import {
   View,
   Text,
+  Avatar,
+  AvatarHelper,
+  Button,
 } from 'react-native-ui-lib';
 import { ScrollView, FlatList, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import Image from 'react-native-fast-image';
@@ -271,6 +274,79 @@ const renderUpcoming = (data: NowPlayingData) => {
   );
 };
 
+const renderPopPerson = (data: NowPlayingData) => {
+  const {
+    item,
+    imgUrl,
+    loadingPopPerson,
+    setPPLoading,
+    forceLoading,
+  } = data;
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        flex: 1,
+        borderWidth: 0.5,
+        borderColor: colors.lightGray,
+      }}
+      margin-4
+      paddingV-12
+      paddingH-8
+      br40
+    >
+      <View paddingR-12 style={{ flex: 0.4 }} center>
+        <ShimmerPlaceHolder
+          autoRun
+          visible={!loadingPopPerson || !forceLoading}
+          height={130}
+          style={{
+            alignSelf: 'center',
+            flex: 1,
+            width: '100%',
+            marginHorizontal: 8,
+          }}
+        >
+          <Avatar
+            imageSource={{ uri: `${imgUrl}/w154/${item.profile_path}` }}
+            onImageLoadEnd={() => !forceLoading && setPPLoading(false)}
+            size={50}
+            label={AvatarHelper.getInitials(item.name)}
+            labelColor={colors.secondary}
+          />
+        </ShimmerPlaceHolder>
+      </View>
+      <View style={{ flex: 0.6 }}>
+        <ShimmerPlaceHolder
+          autoRun
+          visible={!forceLoading}
+          style={{ flex: 1, width: '100%' }}
+          height={130}
+        >
+          <Text bold>{item.name}</Text>
+          <View style={{ flexDirection: 'row' }}>
+            <StarRatingBar
+              maximumValue={1}
+              score={1}
+              dontShowScore
+              allowsHalfStars
+              accurateHalfStars
+              spacing={2}
+              starStyle={{
+                width: 10,
+                height: 10,
+              }}
+            />
+            <Text small>
+              {` • ${item.popularity}`}
+            </Text>
+          </View>
+        </ShimmerPlaceHolder>
+      </View>
+    </View>
+  );
+};
+
 export default (props: Props) => {
   const {
     nowPlaying,
@@ -292,9 +368,12 @@ export default (props: Props) => {
     topRated,
     loadingTopRated,
     setTRLoading,
+    popPerson,
+    loadingPopPerson,
+    setPPLoading,
   } = props;
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View marginB-16>
         <View
           padding-8
@@ -302,9 +381,20 @@ export default (props: Props) => {
           marginB-8
           style={{
             backgroundColor: colors.green,
+            flexDirection: 'row',
+            width: '100%',
           }}
         >
-          <Text>Today&apos;s Popular</Text>
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="heart" type="MaterialCommunityIcons" />
+            {' Today\'s Popular'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
         </View>
         {
           popular.results.length > 1
@@ -357,9 +447,20 @@ export default (props: Props) => {
           marginB-8
           style={{
             backgroundColor: colors.yellow,
+            flexDirection: 'row',
+            width: '100%',
           }}
         >
-          <Text>Now Playing</Text>
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="movie-roll" type="MaterialCommunityIcons" />
+            {' Now Playing'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
         </View>
         <View style={{ height: 250 }}>
           {
@@ -443,9 +544,20 @@ export default (props: Props) => {
           marginB-8
           style={{
             backgroundColor: colors.red,
+            flexDirection: 'row',
+            width: '100%',
           }}
         >
-          <Text>Top Rated Movies</Text>
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="movie-filter" type="MaterialIcons" />
+            {' Top Rated Movies'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
         </View>
         <FlatList
           keyExtractor={item => item.id.toString()}
@@ -475,9 +587,20 @@ export default (props: Props) => {
           marginB-8
           style={{
             backgroundColor: colors.lightPurple,
+            flexDirection: 'row',
+            width: '100%',
           }}
         >
-          <Text>Upcoming Movies</Text>
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="timetable" type="MaterialCommunityIcons" />
+            {' Upcoming Movies'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
         </View>
         <View>
           {
@@ -517,6 +640,51 @@ export default (props: Props) => {
               )
           }
         </View>
+        <View
+          padding-8
+          marginT-16
+          marginB-8
+          style={{
+            backgroundColor: colors.blue,
+            flexDirection: 'row',
+            width: '100%',
+          }}
+        >
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="account-star" type="MaterialCommunityIcons" />
+            {' Popular People'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
+        </View>
+        <FlatList
+          contentContainerStyle={{ padding: 8 }}
+          numColumns={2}
+          keyExtractor={item => item.id.toString()}
+          data={popPerson.results.slice(0, 10)}
+          renderItem={({ item }) => renderPopPerson({
+            item,
+            loadingPopPerson,
+            setPPLoading,
+            imgUrl,
+            genres
+          })}
+          ListEmptyComponent={() => renderPopPerson({
+            item: {
+              genre_ids: [],
+              vote_average: 0,
+              vote_count: 0,
+              overview: '',
+            },
+            forceLoading: true,
+            imgUrl,
+            loadingPopPerson: true,
+          })}
+        />
       </View>
     </ScrollView>
   );
