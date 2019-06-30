@@ -102,7 +102,7 @@ export default (props: Props) => {
             <Carousel
               data={upcoming.results.slice(0, 10)}
               onSnapToItem={setUCIndex}
-              enableSnap={false}
+              enableSnap
               renderItem={({ item, index }) => renderUpcoming({
                 item,
                 index,
@@ -121,7 +121,6 @@ export default (props: Props) => {
               inactiveSlideOpacity={1}
               removeClippedSubviews
               horizontal
-              useScrollView
             />
           )
           : (
