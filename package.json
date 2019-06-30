@@ -70,6 +70,8 @@
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
     "plop": "^2.3.0",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.8.6",
     "react-test-renderer": "16.8.3"
   },
   "jest": {
@@ -87,7 +89,8 @@
     ],
     "coverageDirectory": "jest_coverage",
     "setupFiles": [
-      "./jest-setup.js"
+      "./jest-setup.js",
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
