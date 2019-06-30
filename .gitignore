@@ -38,6 +38,7 @@ google-services.json
 node_modules/
 npm-debug.log
 yarn-error.log
+jest_coverage/
 
 # BUCK
 buck-out/
