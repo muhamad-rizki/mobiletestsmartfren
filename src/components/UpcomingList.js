@@ -4,6 +4,7 @@ import {
   View,
   Text,
 } from 'react-native-ui-lib';
+import { compose, lifecycle } from 'recompose';
 import Carousel from 'react-native-snap-carousel';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder';
 import FastImage from 'react-native-fast-image';
@@ -86,18 +87,32 @@ const renderUpcoming = (data) => {
   );
 };
 
+const Recomposed = compose(
+  lifecycle({
+    shouldComponentUpdate() {
+      const {
+        loadingUpcoming,
+      } = this.props;
+      if (loadingUpcoming === false) {
+        return true;
+      }
+      return false;
+    },
+  })
+)(renderUpcoming);
+
 export default (props: Props) => {
   const {
     upcoming,
     setUCIndex,
-    setUCLoading,
-    imgUrl,
-    upcomingIndex,
-    loadingUpcoming,
-    genres,
+    // setUCLoading,
+    // imgUrl,
+    // upcomingIndex,
+    // loadingUpcoming,
+    // genres,
     activeTabIndex,
     tabIndex,
-    onPress,
+    // onPress,
   } = props;
   return (
     <View>
@@ -108,16 +123,7 @@ export default (props: Props) => {
               data={upcoming.results.slice(0, 10)}
               onSnapToItem={setUCIndex}
               enableSnap
-              renderItem={({ item, index }) => renderUpcoming({
-                item,
-                index,
-                imgUrl,
-                upcomingIndex,
-                setUCLoading,
-                loadingUpcoming,
-                genres,
-                onPress,
-              })}
+              renderItem={data => <Recomposed {...props} {...data} />}
               maxToRenderPerBatch={5}
               initialNumToRender={5}
               onEndReachedThreshold={0.5}

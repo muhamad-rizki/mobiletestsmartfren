@@ -105,15 +105,10 @@ export default (props: Props) => {
     return (
       <View style={{ height: 150 }}>
         <Carousel
-          loop
           data={popular.results.slice(0, 10)}
           enableSnap
           renderItem={data => <Recomposed {...props} {...data} lists={popular.results} />}
           autoplay
-          maxToRenderPerBatch={5}
-          initialNumToRender={5}
-          onEndReachedThreshold={0.5}
-          windowSize={1}
           autoplayInterval={5000}
           sliderWidth={WINDOW.width}
           itemWidth={100}
@@ -121,7 +116,9 @@ export default (props: Props) => {
             justifyContent: 'center',
             alignItems: 'center'
           }}
-          inactiveSlideOpacity={0.3}
+          loop
+          activeSlideAlignment="start"
+          inactiveSlideOpacity={1}
           inactiveSlideScale={1}
           removeClippedSubviews
           lockScrollWhileSnapping

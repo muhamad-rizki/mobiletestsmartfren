@@ -108,7 +108,7 @@ export default (props: Props) => {
                 maxToRenderPerBatch={5}
                 initialNumToRender={5}
                 onEndReachedThreshold={0.5}
-                windowSize={1}
+                windowSize={10}
                 removeClippedSubviews
                 lockScrollWhileSnapping
                 directionalLockEnabled
