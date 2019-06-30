@@ -22,6 +22,8 @@ const renderUpcoming = (data) => {
     loadingUpcoming,
     setUCLoading,
     genres,
+    activeTabIndex,
+    tabIndex,
   } = data;
   return (
     <View
@@ -36,7 +38,7 @@ const renderUpcoming = (data) => {
     >
       <View style={{ flex: 0.3, padding: 8 }}>
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!loadingUpcoming}
           height={120}
           style={{ alignSelf: 'center', flex: 1, width: '100%' }}
@@ -59,7 +61,7 @@ const renderUpcoming = (data) => {
       }}
       >
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!loadingUpcoming}
           style={{ flex: 1, width: '100%' }}
         >
@@ -89,6 +91,8 @@ export default (props: Props) => {
     upcomingIndex,
     loadingUpcoming,
     genres,
+    activeTabIndex,
+    tabIndex,
   } = props;
   return (
     <View>
@@ -108,6 +112,8 @@ export default (props: Props) => {
                 loadingUpcoming,
                 genres,
               })}
+              maxToRenderPerBatch={1}
+              initialNumToRender={1}
               activeSlideAlignment="start"
               sliderWidth={WINDOW.width}
               itemWidth={WINDOW.width * 0.8}
@@ -120,7 +126,7 @@ export default (props: Props) => {
           )
           : (
             <ShimmerPlaceHolder
-              autoRun
+              autoRun={activeTabIndex === tabIndex}
               visible={upcoming.results.length > 0}
               width={WINDOW.width}
               height={180}

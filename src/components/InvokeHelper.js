@@ -14,15 +14,15 @@ export default class InvokeHelper {
 
   getConfiguration = () => this.api.get(`${BASE_URL_V3}configuration?api_key=${API_KEY}`);
 
-  getGenres = () => this.api.get(`${BASE_URL_V3}genre/movie/list?api_key=${API_KEY}`);
+  getGenres = (type = 'movie') => this.api.get(`${BASE_URL_V3}genre/${type}/list?api_key=${API_KEY}`);
 
-  getNowPlayingMovies = page => this.api.get(`${BASE_URL_V3}movie/now_playing?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getNowPlaying = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/${type === 'movie' ? 'now_playing' : 'on_the_air'}?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
-  getPopularMovies = page => this.api.get(`${BASE_URL_V3}movie/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getPopular = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
-  getTopRatedMovies = page => this.api.get(`${BASE_URL_V3}movie/top_rated?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getTopRated = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/top_rated?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
-  getUpcomingMovies = page => this.api.get(`${BASE_URL_V3}movie/upcoming?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getUpcoming = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/${type === 'movie' ? 'upcoming' : 'airing_today'}?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
   getPopularPeoples = page => this.api.get(`${BASE_URL_V3}person/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 }

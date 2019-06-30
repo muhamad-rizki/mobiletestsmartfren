@@ -1,4 +1,5 @@
 // @flow
+import { compose, lifecycle } from 'recompose';
 import React from 'react';
 import {
   View,
@@ -16,11 +17,11 @@ type Props = {}
 const renderNowPlaying = (data) => {
   const {
     item,
-    index,
     imgUrl,
-    nowPlayingIndex,
     loadingNowPlaying,
     setNPLoading,
+    activeTabIndex,
+    tabIndex,
   } = data;
   return (
     <View
@@ -32,14 +33,14 @@ const renderNowPlaying = (data) => {
       centerH
     >
       <ShimmerPlaceHolder
-        autoRun
+        autoRun={activeTabIndex === tabIndex}
         visible={!loadingNowPlaying}
         width={150}
         height={250}
         style={{ alignSelf: 'center' }}
       >
         <FastImage
-          onLoadEnd={() => nowPlayingIndex === (index - 5) && setNPLoading(false)}
+          onLoadEnd={() => setNPLoading(false)}
           style={{
             width: 150,
             height: 250,
@@ -52,6 +53,20 @@ const renderNowPlaying = (data) => {
   );
 };
 
+const Recomposed = compose(
+  lifecycle({
+    shouldComponentUpdate() {
+      const {
+        loadingNowPlaying,
+      } = this.props;
+      if (loadingNowPlaying === false) {
+        return true;
+      }
+      return false;
+    },
+  })
+)(renderNowPlaying);
+
 export default (props: Props) => {
   const {
     nowPlaying,
@@ -61,6 +76,8 @@ export default (props: Props) => {
     setNPLoading,
     loadingNowPlaying,
     genres,
+    activeTabIndex,
+    tabIndex,
   } = props;
   return (
     <View>
@@ -71,23 +88,17 @@ export default (props: Props) => {
               <Carousel
                 loop
                 data={nowPlaying.results.slice(0, 10)}
-                loopClonesPerSide={5}
                 onSnapToItem={setNPIndex}
                 enableSnap
-                renderItem={({ item, index }) => renderNowPlaying({
-                  item,
-                  index,
-                  imgUrl,
-                  nowPlayingIndex,
-                  setNPLoading,
-                  loadingNowPlaying,
-                })}
+                renderItem={data => <Recomposed {...props} {...data} />}
                 sliderWidth={WINDOW.width}
                 itemWidth={150}
                 contentContainerCustomStyle={{
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}
+                maxToRenderPerBatch={1}
+                initialNumToRender={1}
                 removeClippedSubviews
                 lockScrollWhileSnapping
                 directionalLockEnabled
@@ -96,7 +107,7 @@ export default (props: Props) => {
             )
             : (
               <ShimmerPlaceHolder
-                autoRun
+                autoRun={activeTabIndex === tabIndex}
                 visible={nowPlaying.results.length > 0}
                 width={150}
                 height={250}
@@ -106,7 +117,10 @@ export default (props: Props) => {
         }
       </View>
       <View padding-16 center>
-        <ShimmerPlaceHolder autoRun visible={nowPlaying.results.length > 0}>
+        <ShimmerPlaceHolder
+          autoRun={activeTabIndex === tabIndex}
+          visible={nowPlaying.results.length > 0}
+        >
           <View style={{ flexDirection: 'row' }}>
             <Text h2 bold>
               {
@@ -129,7 +143,10 @@ export default (props: Props) => {
             </Text>
           </View>
         </ShimmerPlaceHolder>
-        <ShimmerPlaceHolder autoRun visible={nowPlaying.results.length > 0}>
+        <ShimmerPlaceHolder
+          visible={nowPlaying.results.length > 0}
+          autoRun={activeTabIndex === tabIndex}
+        >
           <Text h3 lightGray>
             {
               nowPlaying.results.length <= 0

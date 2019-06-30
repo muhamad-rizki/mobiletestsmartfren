@@ -30,7 +30,8 @@ export default compose(
     state => ({
       ...state.movies,
       imgUrl: state.app.images.secure_base_url,
-      genres: state.app.genres,
+      genres: [...state.app.tvGenres, ...state.app.movieGenres],
+      tabIndex: state.homeScreen.index,
     }),
     (dispatch, { navigation }) => ({
       getNowPlaying: () => {
@@ -38,7 +39,7 @@ export default compose(
         dispatch(setNowPlayingError(200));
         dispatch(setNowPlayingLoading(true));
         // invoke api get now playing
-        new InvokeHelper().getNowPlayingMovies()
+        new InvokeHelper().getNowPlaying()
           .then((response) => {
             // clear status
             dispatch(setNowPlayingError(200));
@@ -55,7 +56,7 @@ export default compose(
         dispatch({ type: ACTION_POPULAR_SET_ERROR, payload: 200 });
         dispatch({ type: ACTION_POPULAR_SET_LOADING, payload: true });
         // invoke api get now playing
-        new InvokeHelper().getPopularMovies()
+        new InvokeHelper().getPopular()
           .then((response) => {
             // clear status
             dispatch({ type: ACTION_POPULAR_SET_ERROR, payload: 200 });
@@ -72,7 +73,7 @@ export default compose(
         dispatch({ type: ACTION_TOPRATED_SET_ERROR, payload: 200 });
         dispatch({ type: ACTION_TOPRATED_SET_LOADING, payload: true });
         // invoke api get now playing
-        new InvokeHelper().getTopRatedMovies()
+        new InvokeHelper().getTopRated()
           .then((response) => {
             // clear status
             dispatch({ type: ACTION_TOPRATED_SET_ERROR, payload: 200 });
@@ -89,7 +90,7 @@ export default compose(
         dispatch({ type: ACTION_UPCOMING_SET_ERROR, payload: 200 });
         dispatch({ type: ACTION_UPCOMING_SET_LOADING, payload: true });
         // invoke api get now playing
-        new InvokeHelper().getUpcomingMovies()
+        new InvokeHelper().getUpcoming()
           .then((response) => {
             // clear status
             dispatch({ type: ACTION_UPCOMING_SET_ERROR, payload: 200 });
@@ -143,5 +144,27 @@ export default compose(
       getUpcoming();
       getPopPerson();
     },
+    shouldComponentUpdate() {
+      const {
+        // nowPlaying,
+        // popular,
+        // topRated,
+        // upcoming,
+        tabIndex,
+        // nowPlayingIndex,
+      } = this.props;
+      if (tabIndex !== 1) {
+        return false;
+      }
+      // if (
+      //   nowPlaying.results.length === 0
+      //   || popular.results.length === 0
+      //   || topRated.results.length === 0
+      //   || upcoming.results.length === 0
+      // ) {
+      //   return false;
+      // }
+      return true;
+    }
   }),
 )(MoviesView);

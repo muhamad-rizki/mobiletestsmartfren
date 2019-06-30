@@ -22,12 +22,14 @@ const renderTopRated = (data) => {
     setTRLoading,
     genres,
     forceLoading,
+    tabIndex,
+    activeTabIndex,
   } = data;
   return (
     <View style={{ flexDirection: 'row', }} padding-8>
       <View paddingR-12 style={{ flex: 0.2 }}>
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!loadingTopRated || !forceLoading}
           height={130}
           style={{
@@ -50,7 +52,7 @@ const renderTopRated = (data) => {
       </View>
       <View style={{ flex: 0.8 }}>
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!forceLoading}
           style={{ flex: 1, width: '100%' }}
           height={130}
@@ -108,6 +110,8 @@ export default (props: Props) => {
         imgUrl,
         genres
       })}
+      maxToRenderPerBatch={1}
+      initialNumToRender={1}
       ListEmptyComponent={() => renderTopRated({
         item: {
           genre_ids: [],

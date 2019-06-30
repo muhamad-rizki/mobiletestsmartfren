@@ -16,12 +16,12 @@ type Props = {}
 const renderPopular = (data) => {
   const {
     item,
-    index,
     imgUrl,
-    popularIndex,
     loadingPopular,
     setPopLoading,
     lists,
+    tabIndex,
+    activeTabIndex,
   } = data;
   return (
     <View
@@ -48,14 +48,14 @@ const renderPopular = (data) => {
         <Text black small>{`#${lists.findIndex(list => list.id === item.id) + 1}`}</Text>
       </View>
       <ShimmerPlaceHolder
-        autoRun
+        autoRun={activeTabIndex === tabIndex}
         visible={!loadingPopular}
         width={100}
         height={150}
         style={{ alignSelf: 'center' }}
       >
         <FastImage
-          onLoadEnd={() => popularIndex === (index - 5) && setPopLoading(false)}
+          onLoadEnd={() => setPopLoading(false)}
           style={{
             width: 100,
             height: 150,
@@ -75,14 +75,15 @@ export default (props: Props) => {
     popularIndex,
     setPopLoading,
     loadingPopular,
+    tabIndex,
+    activeTabIndex,
   } = props;
   if (popular.results.length > 1) {
     return (
       <View style={{ height: 150 }}>
         <Carousel
           loop
-          data={popular.results}
-          loopClonesPerSide={5}
+          data={popular.results.slice(0, 10)}
           enableSnap
           renderItem={({ item, index }) => renderPopular({
             item,
@@ -94,6 +95,8 @@ export default (props: Props) => {
             lists: popular.results,
           })}
           autoplay
+          maxToRenderPerBatch={1}
+          initialNumToRender={1}
           autoplayInterval={5000}
           sliderWidth={WINDOW.width}
           itemWidth={100}
@@ -113,7 +116,7 @@ export default (props: Props) => {
   }
   return (
     <ShimmerPlaceHolder
-      autoRun
+      autoRun={activeTabIndex === tabIndex}
       visible={popular.results.length > 0}
       width={WINDOW.width}
       height={150}

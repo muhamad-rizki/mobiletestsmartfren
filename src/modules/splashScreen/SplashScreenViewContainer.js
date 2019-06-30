@@ -32,7 +32,13 @@ export default compose(
         .catch((error: AxiosError) => setInetStatus(error.code));
       api.getGenres()
         .then((response) => {
-          setConfig(response.data);
+          setConfig({ movieGenres: response.data.genres });
+          setInetStatus(200);
+        })
+        .catch((error: AxiosError) => setInetStatus(error.code));
+      api.getGenres('tv')
+        .then((response) => {
+          setConfig({ tvGenres: response.data.genres });
           setInetStatus(200);
         })
         .catch((error: AxiosError) => setInetStatus(error.code));

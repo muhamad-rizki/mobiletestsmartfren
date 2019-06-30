@@ -45,6 +45,8 @@ export default (props: Props) => {
           onIndexChange={changeIndex}
           initialLayout={{ width: WINDOW.width, height: 0 }}
           tabBarPosition="bottom"
+          lazy
+          renderLazyPlaceholder={() => <View />}
           renderTabBar={mProps => (
             <TabBar
               {...mProps}

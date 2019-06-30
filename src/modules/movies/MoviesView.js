@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/tabindex-no-positive */
 // @flow
 import React from 'react';
 import {
@@ -42,6 +43,7 @@ export default (props: Props) => {
     popPerson,
     loadingPopPerson,
     setPPLoading,
+    tabIndex,
   } = props;
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -73,6 +75,8 @@ export default (props: Props) => {
           popularIndex={popularIndex}
           setPopLoading={setPopLoading}
           loadingPopular={loadingPopular}
+          activeTabIndex={tabIndex}
+          tabIndex={1}
         />
         <View
           padding-8
@@ -103,6 +107,8 @@ export default (props: Props) => {
           setNPLoading={setNPLoading}
           loadingNowPlaying={loadingNowPlaying}
           genres={genres}
+          activeTabIndex={tabIndex}
+          tabIndex={1}
         />
         <View
           padding-8
@@ -131,6 +137,8 @@ export default (props: Props) => {
           setTRLoading={setTRLoading}
           imgUrl={imgUrl}
           genres={genres}
+          activeTabIndex={tabIndex}
+          tabIndex={1}
         />
         <View
           padding-8
@@ -161,6 +169,8 @@ export default (props: Props) => {
           upcomingIndex={upcomingIndex}
           loadingUpcoming={loadingUpcoming}
           genres={genres}
+          activeTabIndex={tabIndex}
+          tabIndex={1}
         />
         <View
           padding-8
@@ -189,6 +199,8 @@ export default (props: Props) => {
           setPPLoading={setPPLoading}
           imgUrl={imgUrl}
           genres={genres}
+          activeTabIndex={tabIndex}
+          tabIndex={1}
         />
       </View>
     </ScrollView>

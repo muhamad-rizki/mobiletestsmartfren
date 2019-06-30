@@ -21,6 +21,8 @@ const renderPopPerson = (data) => {
     loadingPopPerson,
     setPPLoading,
     forceLoading,
+    activeTabIndex,
+    tabIndex,
   } = data;
   return (
     <View
@@ -37,7 +39,7 @@ const renderPopPerson = (data) => {
     >
       <View paddingR-12 style={{ flex: 0.4 }} center>
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!loadingPopPerson || !forceLoading}
           height={130}
           style={{
@@ -58,7 +60,7 @@ const renderPopPerson = (data) => {
       </View>
       <View style={{ flex: 0.6 }}>
         <ShimmerPlaceHolder
-          autoRun
+          autoRun={activeTabIndex === tabIndex}
           visible={!forceLoading}
           style={{ flex: 1, width: '100%' }}
           height={130}
@@ -100,7 +102,9 @@ export default (props: Props) => {
       contentContainerStyle={{ padding: 8 }}
       numColumns={2}
       keyExtractor={item => item.id.toString()}
-      data={popPerson.results.slice(0, 10)}
+      data={popPerson.results.slice(0, 6)}
+      maxToRenderPerBatch={1}
+      initialNumToRender={1}
       renderItem={({ item }) => renderPopPerson({
         item,
         loadingPopPerson,
