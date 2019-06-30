@@ -1,7 +1,7 @@
 // @flow
 import { AxiosError } from 'axios';
 import { connect } from 'react-redux';
-import { BackHandler } from 'react-native';
+// import { BackHandler } from 'react-native';
 import { compose, lifecycle } from 'recompose';
 import SplashScreenView from './SplashScreenView';
 import { ResetNavigator } from '../../env';

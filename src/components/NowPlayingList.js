@@ -71,10 +71,10 @@ export default (props: Props) => {
   const {
     nowPlaying,
     setNPIndex,
-    imgUrl,
+    // imgUrl,
     nowPlayingIndex,
-    setNPLoading,
-    loadingNowPlaying,
+    // setNPLoading,
+    // loadingNowPlaying,
     genres,
     activeTabIndex,
     tabIndex,
