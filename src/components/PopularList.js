@@ -4,9 +4,11 @@ import {
   View,
   Text,
 } from 'react-native-ui-lib';
+import { compose, lifecycle } from 'recompose';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder';
 import Carousel from 'react-native-snap-carousel';
 import FastImage from 'react-native-fast-image';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { colors } from '../styles';
 import { WINDOW } from '../env';
@@ -22,59 +24,80 @@ const renderPopular = (data) => {
     lists,
     tabIndex,
     activeTabIndex,
+    onPress,
   } = data;
   return (
-    <View
-      style={{
-        height: 150,
-        width: 100,
-      }}
-      centerV
-      centerH
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => onPress && onPress(item)}
+      disabled={loadingPopular}
     >
       <View
-        paddingH-4
-        paddingV-2
         style={{
-          backgroundColor: colors.yellow,
-          position: 'absolute',
-          top: 10,
-          left: 0,
-          borderTopRightRadius: 20,
-          borderBottomRightRadius: 20,
-          zIndex: 2
+          height: 150,
+          width: 100,
         }}
+        centerV
+        centerH
       >
-        <Text black small>{`#${lists.findIndex(list => list.id === item.id) + 1}`}</Text>
-      </View>
-      <ShimmerPlaceHolder
-        autoRun={activeTabIndex === tabIndex}
-        visible={!loadingPopular}
-        width={100}
-        height={150}
-        style={{ alignSelf: 'center' }}
-      >
-        <FastImage
-          onLoadEnd={() => setPopLoading(false)}
+        <View
+          paddingH-4
+          paddingV-2
           style={{
-            width: 100,
-            height: 150,
+            backgroundColor: colors.yellow,
+            position: 'absolute',
+            top: 10,
+            left: 0,
+            borderTopRightRadius: 20,
+            borderBottomRightRadius: 20,
+            zIndex: 2
           }}
-          resizeMode={FastImage.resizeMode.cover}
-          source={{ uri: `${imgUrl}/w92/${item.poster_path}` }}
-        />
-      </ShimmerPlaceHolder>
-    </View>
+        >
+          <Text black small>{`#${lists.findIndex(list => list.id === item.id) + 1}`}</Text>
+        </View>
+        <ShimmerPlaceHolder
+          autoRun={activeTabIndex === tabIndex}
+          visible={!loadingPopular}
+          width={100}
+          height={150}
+          style={{ alignSelf: 'center' }}
+        >
+          <FastImage
+            onLoadEnd={() => setPopLoading(false)}
+            style={{
+              width: 100,
+              height: 150,
+            }}
+            resizeMode={FastImage.resizeMode.cover}
+            source={{ uri: `${imgUrl}/w92/${item.poster_path}` }}
+          />
+        </ShimmerPlaceHolder>
+      </View>
+    </TouchableOpacity>
   );
 };
+
+const Recomposed = compose(
+  lifecycle({
+    shouldComponentUpdate() {
+      const {
+        loadingPopular,
+      } = this.props;
+      if (loadingPopular === false) {
+        return true;
+      }
+      return false;
+    },
+  })
+)(renderPopular);
 
 export default (props: Props) => {
   const {
     popular,
-    imgUrl,
-    popularIndex,
-    setPopLoading,
-    loadingPopular,
+    // imgUrl,
+    // popularIndex,
+    // setPopLoading,
+    // loadingPopular,
     tabIndex,
     activeTabIndex,
   } = props;
@@ -85,18 +108,12 @@ export default (props: Props) => {
           loop
           data={popular.results.slice(0, 10)}
           enableSnap
-          renderItem={({ item, index }) => renderPopular({
-            item,
-            index,
-            imgUrl,
-            popularIndex,
-            setPopLoading,
-            loadingPopular,
-            lists: popular.results,
-          })}
+          renderItem={data => <Recomposed {...props} {...data} lists={popular.results} />}
           autoplay
-          maxToRenderPerBatch={1}
-          initialNumToRender={1}
+          maxToRenderPerBatch={5}
+          initialNumToRender={5}
+          onEndReachedThreshold={0.5}
+          windowSize={1}
           autoplayInterval={5000}
           sliderWidth={WINDOW.width}
           itemWidth={100}

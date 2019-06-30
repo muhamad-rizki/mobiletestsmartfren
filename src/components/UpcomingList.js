@@ -24,6 +24,7 @@ const renderUpcoming = (data) => {
     genres,
     activeTabIndex,
     tabIndex,
+    onPress,
   } = data;
   return (
     <View
@@ -67,7 +68,10 @@ const renderUpcoming = (data) => {
         >
           <Text>{item.original_title || item.original_name}</Text>
           <Text lightGray>{isEmpty(item.genre_ids.map(genre => genres.find(g => g.id === genre).name).join(', '), 'No Category')}</Text>
-          <TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() => onPress && onPress(item)}
+            disabled={loadingUpcoming}
+          >
             <Text>
               {`${isEmpty(item.overview, 'This movie doesn\'t have any description').substring(0, 50)} ... `}
               <Text primary>
@@ -93,6 +97,7 @@ export default (props: Props) => {
     genres,
     activeTabIndex,
     tabIndex,
+    onPress,
   } = props;
   return (
     <View>
@@ -111,9 +116,12 @@ export default (props: Props) => {
                 setUCLoading,
                 loadingUpcoming,
                 genres,
+                onPress,
               })}
-              maxToRenderPerBatch={1}
-              initialNumToRender={1}
+              maxToRenderPerBatch={5}
+              initialNumToRender={5}
+              onEndReachedThreshold={0.5}
+              windowSize={1}
               activeSlideAlignment="start"
               sliderWidth={WINDOW.width}
               itemWidth={WINDOW.width * 0.8}

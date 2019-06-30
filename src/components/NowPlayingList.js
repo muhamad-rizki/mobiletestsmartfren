@@ -9,6 +9,7 @@ import ShimmerPlaceHolder from 'react-native-shimmer-placeholder';
 import Carousel from 'react-native-snap-carousel';
 import FastImage from 'react-native-fast-image';
 import StarRatingBar from 'react-native-star-rating-view/StarRatingBar';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { WINDOW } from '../env';
 
@@ -22,34 +23,41 @@ const renderNowPlaying = (data) => {
     setNPLoading,
     activeTabIndex,
     tabIndex,
+    onPress,
   } = data;
   return (
-    <View
-      style={{
-        height: 250,
-        width: 150,
-      }}
-      centerV
-      centerH
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => onPress && onPress(item)}
+      disabled={loadingNowPlaying}
     >
-      <ShimmerPlaceHolder
-        autoRun={activeTabIndex === tabIndex}
-        visible={!loadingNowPlaying}
-        width={150}
-        height={250}
-        style={{ alignSelf: 'center' }}
+      <View
+        style={{
+          height: 250,
+          width: 150,
+        }}
+        centerV
+        centerH
       >
-        <FastImage
-          onLoadEnd={() => setNPLoading(false)}
-          style={{
-            width: 150,
-            height: 250,
-          }}
-          resizeMode={FastImage.resizeMode.cover}
-          source={{ uri: `${imgUrl}/w342/${item.poster_path}` }}
-        />
-      </ShimmerPlaceHolder>
-    </View>
+        <ShimmerPlaceHolder
+          autoRun={activeTabIndex === tabIndex}
+          visible={!loadingNowPlaying}
+          width={150}
+          height={250}
+          style={{ alignSelf: 'center' }}
+        >
+          <FastImage
+            onLoadEnd={() => setNPLoading(false)}
+            style={{
+              width: 150,
+              height: 250,
+            }}
+            resizeMode={FastImage.resizeMode.cover}
+            source={{ uri: `${imgUrl}/w342/${item.poster_path}` }}
+          />
+        </ShimmerPlaceHolder>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -97,8 +105,10 @@ export default (props: Props) => {
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}
-                maxToRenderPerBatch={1}
-                initialNumToRender={1}
+                maxToRenderPerBatch={5}
+                initialNumToRender={5}
+                onEndReachedThreshold={0.5}
+                windowSize={1}
                 removeClippedSubviews
                 lockScrollWhileSnapping
                 directionalLockEnabled

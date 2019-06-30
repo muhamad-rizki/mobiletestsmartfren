@@ -24,6 +24,7 @@ const renderTopRated = (data) => {
     forceLoading,
     tabIndex,
     activeTabIndex,
+    onPress,
   } = data;
   return (
     <View style={{ flexDirection: 'row', }} padding-8>
@@ -76,7 +77,10 @@ const renderTopRated = (data) => {
               {` • ${item.vote_average.toFixed(1)} from ${makeThousand(item.vote_count)} votes`}
             </Text>
           </View>
-          <TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() => onPress && onPress(item)}
+            disabled={loadingTopRated}
+          >
             <Text>
               {`${isEmpty(item.overview, 'This movie doesn\'t have any description').substring(0, 80)} ... `}
               <Text primary>
@@ -98,6 +102,7 @@ export default (props: Props) => {
     setTRLoading,
     imgUrl,
     genres,
+    onPress,
   } = props;
   return (
     <FlatList
@@ -108,10 +113,13 @@ export default (props: Props) => {
         loadingTopRated,
         setTRLoading,
         imgUrl,
-        genres
+        genres,
+        onPress,
       })}
-      maxToRenderPerBatch={1}
-      initialNumToRender={1}
+      maxToRenderPerBatch={5}
+      initialNumToRender={5}
+      onEndReachedThreshold={0.5}
+      windowSize={1}
       ListEmptyComponent={() => renderTopRated({
         item: {
           genre_ids: [],
