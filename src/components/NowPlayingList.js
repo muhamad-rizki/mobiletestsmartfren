@@ -126,7 +126,7 @@ export default (props: Props) => {
               {
                 nowPlaying.results.length <= 0
                   ? ''
-                  : `${nowPlaying.results[nowPlayingIndex].original_title} • `
+                  : `${nowPlaying.results[nowPlayingIndex].original_title || nowPlaying.results[nowPlayingIndex].original_name} • `
               }
             </Text>
             <StarRatingBar

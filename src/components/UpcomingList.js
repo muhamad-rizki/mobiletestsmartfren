@@ -65,7 +65,7 @@ const renderUpcoming = (data) => {
           visible={!loadingUpcoming}
           style={{ flex: 1, width: '100%' }}
         >
-          <Text>{item.original_title}</Text>
+          <Text>{item.original_title || item.original_name}</Text>
           <Text lightGray>{isEmpty(item.genre_ids.map(genre => genres.find(g => g.id === genre).name).join(', '), 'No Category')}</Text>
           <TouchableWithoutFeedback>
             <Text>

@@ -48,36 +48,6 @@ export default (props: Props) => {
           marginT-16
           marginB-8
           style={{
-            backgroundColor: colors.green,
-            flexDirection: 'row',
-            width: '100%',
-          }}
-        >
-          <Text style={{ flex: 1 }}>
-            <Icon size={14} name="heart" type="MaterialCommunityIcons" />
-            {' Today\'s Popular'}
-          </Text>
-          <Button
-            label="More"
-            size="xSmall"
-            color="#fff"
-            backgroundColor="#000"
-          />
-        </View>
-        <PopularList
-          popular={popular}
-          imgUrl={imgUrl}
-          popularIndex={popularIndex}
-          setPopLoading={setPopLoading}
-          loadingPopular={loadingPopular}
-          activeTabIndex={tabIndex}
-          tabIndex={0}
-        />
-        <View
-          padding-8
-          marginT-32
-          marginB-8
-          style={{
             backgroundColor: colors.yellow,
             flexDirection: 'row',
             width: '100%',
@@ -85,7 +55,7 @@ export default (props: Props) => {
         >
           <Text style={{ flex: 1 }}>
             <Icon size={14} name="movie-roll" type="MaterialCommunityIcons" />
-            {' Now Playing'}
+            {' On The Air TV Show'}
           </Text>
           <Button
             label="More"
@@ -110,6 +80,36 @@ export default (props: Props) => {
           marginT-16
           marginB-8
           style={{
+            backgroundColor: colors.green,
+            flexDirection: 'row',
+            width: '100%',
+          }}
+        >
+          <Text style={{ flex: 1 }}>
+            <Icon size={14} name="heart" type="MaterialCommunityIcons" />
+            {' Today\'s Popular TV Show'}
+          </Text>
+          <Button
+            label="More"
+            size="xSmall"
+            color="#fff"
+            backgroundColor="#000"
+          />
+        </View>
+        <PopularList
+          popular={popular}
+          imgUrl={imgUrl}
+          popularIndex={popularIndex}
+          setPopLoading={setPopLoading}
+          loadingPopular={loadingPopular}
+          activeTabIndex={tabIndex}
+          tabIndex={0}
+        />
+        <View
+          padding-8
+          marginT-16
+          marginB-8
+          style={{
             backgroundColor: colors.red,
             flexDirection: 'row',
             width: '100%',
@@ -117,7 +117,7 @@ export default (props: Props) => {
         >
           <Text style={{ flex: 1 }}>
             <Icon size={14} name="movie-filter" type="MaterialIcons" />
-            {' Top Rated Movies'}
+            {' Top Rated TV Show'}
           </Text>
           <Button
             label="More"
@@ -147,7 +147,7 @@ export default (props: Props) => {
         >
           <Text style={{ flex: 1 }}>
             <Icon size={14} name="timetable" type="MaterialCommunityIcons" />
-            {' Upcoming Movies'}
+            {' Today Airing TV Show'}
           </Text>
           <Button
             label="More"
