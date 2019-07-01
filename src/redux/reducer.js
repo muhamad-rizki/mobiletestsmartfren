@@ -12,6 +12,7 @@ import app from '../modules/AppState';
 
 export default combineReducers({
   // ## Generator Reducers
+  moreItems,
   movieDetail,
   movies,
   tvShows,

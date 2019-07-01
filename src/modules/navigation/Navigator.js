@@ -8,6 +8,7 @@ import SplashScreenViewContainer from '../splashScreen/SplashScreenViewContainer
 import AuthenticationViewContainer from '../authentication/AuthenticationViewContainer';
 import HomeScreenViewContainer from '../homeScreen/HomeScreenViewContainer';
 import MovieDetailViewContainer from '../movieDetail/MovieDetailViewContainer';
+import MoreItemsViewContainer from '../moreItems/MoreItemsViewContainer';
 
 let currentIndex = 0;
 
@@ -37,6 +38,12 @@ const stackNavigator = createStackNavigator(
         header: null,
       }
     },
+    MoreItems: {
+      screen: MoreItemsViewContainer,
+      navigationOptions: {
+        header: null,
+      }
+    }
   },
   {
     transitionConfig: (sceneProps) => {

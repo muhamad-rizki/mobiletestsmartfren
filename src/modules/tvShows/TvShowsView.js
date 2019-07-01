@@ -40,6 +40,7 @@ export default (props: Props) => {
     setTRLoading,
     tabIndex,
     goDetail,
+    goMoreItem,
   } = props;
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -63,6 +64,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('tv', 'on_the_air')}
           />
         </View>
         <NowPlayingList
@@ -96,6 +98,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('tv', 'popular')}
           />
         </View>
         <PopularList
@@ -127,6 +130,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'top_rated')}
           />
         </View>
         <TopRatedList
@@ -158,6 +162,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'airing_today')}
           />
         </View>
         <UpcomingList

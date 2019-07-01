@@ -45,7 +45,9 @@ export default (props: Props) => {
     setPPLoading,
     tabIndex,
     goDetail,
+    goMoreItem,
   } = props;
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View marginB-16>
@@ -68,6 +70,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'popular')}
           />
         </View>
         <PopularList
@@ -99,6 +102,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'now_playing')}
           />
         </View>
         <NowPlayingList
@@ -132,6 +136,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'top_rated')}
           />
         </View>
         <TopRatedList
@@ -163,6 +168,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'upcoming')}
           />
         </View>
         <UpcomingList
@@ -196,6 +202,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
+            onPress={() => goMoreItem('movie', 'popular_person')}
           />
         </View>
         <PopPersonList
