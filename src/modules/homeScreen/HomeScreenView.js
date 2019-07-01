@@ -35,7 +35,7 @@ export default (props: Props) => {
           icon={AppIcon}
           rightComponent={(
             <View flex style={{ alignItems: 'flex-end' }} centerV padding-16>
-              <Icon name="bell" type="Feather" size={24} color={colors.secondary} />
+              <Icon name="bell" type="Feather" size={28} color={colors.secondary} />
             </View>
           )}
         />
