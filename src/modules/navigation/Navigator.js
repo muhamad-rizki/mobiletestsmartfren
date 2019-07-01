@@ -7,6 +7,7 @@ import { colors, fonts } from '../../styles';
 import SplashScreenViewContainer from '../splashScreen/SplashScreenViewContainer';
 import AuthenticationViewContainer from '../authentication/AuthenticationViewContainer';
 import HomeScreenViewContainer from '../homeScreen/HomeScreenViewContainer';
+import MovieDetailViewContainer from '../movieDetail/MovieDetailViewContainer';
 
 let currentIndex = 0;
 
@@ -26,6 +27,12 @@ const stackNavigator = createStackNavigator(
     },
     HomeScreen: {
       screen: HomeScreenViewContainer,
+      navigationOptions: {
+        header: null,
+      }
+    },
+    MovieDetail: {
+      screen: MovieDetailViewContainer,
       navigationOptions: {
         header: null,
       }

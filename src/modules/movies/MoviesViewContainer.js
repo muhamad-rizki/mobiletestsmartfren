@@ -127,6 +127,7 @@ export default compose(
       setUCIndex: index => dispatch({ type: ACTION_UPCOMING_SET_INDEX, payload: index }),
       setTRLoading: show => dispatch({ type: ACTION_TOPRATED_SET_LOADING, payload: show }),
       setPPLoading: show => dispatch({ type: ACTION_POPPERSON_SET_LOADING, payload: show }),
+      goDetail: item => navigation.navigate({ routeName: 'MovieDetail', params: item }),
     }),
   ),
   lifecycle({
