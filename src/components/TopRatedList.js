@@ -105,6 +105,7 @@ const emptyComponent = () => renderTopRated({
   forceLoading: true,
   imgUrl: 'https://image.tmdb.org/t/p/',
   loadingTopRated: true,
+  setTRLoading: () => { }
 });
 
 const keyExtractor = item => item.id.toString();

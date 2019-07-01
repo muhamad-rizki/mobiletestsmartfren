@@ -108,6 +108,7 @@ const emptyComponent = () => renderPopPerson({
   forceLoading: true,
   imgUrl: 'https://image.tmdb.org/t/p/',
   loadingPopPerson: true,
+  setPPLoading: () => { }
 });
 
 const keyExtractor = item => item.id.toString();
