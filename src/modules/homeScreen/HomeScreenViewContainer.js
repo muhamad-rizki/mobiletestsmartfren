@@ -18,5 +18,9 @@ export default compose(
     componentDidMount() {
 
     },
+    componentWillUnmount() {
+      const { changeIndex } = this.props;
+      changeIndex(1);
+    }
   }),
 )(HomeScreenView);
