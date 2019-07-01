@@ -16,13 +16,13 @@ export default class InvokeHelper {
 
   getGenres = (type = 'movie') => this.api.get(`${BASE_URL_V3}genre/${type}/list?api_key=${API_KEY}`);
 
-  getNowPlaying = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/${type === 'movie' ? 'now_playing' : 'on_the_air'}?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  baseGetter = (type, kind, page) => this.api.get(`${BASE_URL_V3}${type}/${kind}?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
 
-  getPopular = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getNowPlaying = (type = 'movie', page) => this.baseGetter(type, type === 'movie' ? 'now_playing' : 'on_the_air', page);
 
-  getTopRated = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/top_rated?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getPopular = (type = 'movie', page) => this.baseGetter(type, 'popular', page);
 
-  getUpcoming = (type = 'movie', page) => this.api.get(`${BASE_URL_V3}${type}/${type === 'movie' ? 'upcoming' : 'airing_today'}?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getTopRated = (type = 'movie', page) => this.baseGetter(type, 'top_rated', page);
 
-  getPopularPeoples = page => this.api.get(`${BASE_URL_V3}person/popular?region=${this.region}&page=${!page ? 1 : page}&api_key=${API_KEY}`);
+  getUpcoming = (type = 'movie', page) => this.baseGetter(type, type === 'movie' ? 'upcoming' : 'airing_today', page);
 }

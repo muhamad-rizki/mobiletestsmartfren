@@ -107,7 +107,7 @@ export default compose(
         dispatch({ type: ACTION_POPPERSON_SET_ERROR, payload: 200 });
         dispatch({ type: ACTION_POPPERSON_SET_LOADING, payload: true });
         // invoke api get now playing
-        new InvokeHelper().getPopularPeoples()
+        new InvokeHelper().getPopular('person')
           .then((response) => {
             // clear status
             dispatch({ type: ACTION_POPPERSON_SET_ERROR, payload: 200 });
