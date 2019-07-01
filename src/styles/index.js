@@ -25,6 +25,7 @@ Typography.loadTypographies({
       },
       android: {
         fontFamily: fonts.primaryBold,
+        fontWeight: 'bold',
       },
     }),
   },
@@ -37,6 +38,7 @@ Typography.loadTypographies({
       },
       android: {
         fontFamily: fonts.primaryBold,
+        fontWeight: 'bold',
       },
     }),
   },
@@ -83,7 +85,8 @@ Typography.loadTypographies({
         fontWeight: 'bold',
       },
       android: {
-        fontFamily: fonts.primaryBold,
+        fontFamily: fonts.primary,
+        fontWeight: 'bold',
       },
     }),
   },

@@ -4,7 +4,6 @@ import { StatusBar, Platform } from 'react-native';
 import { fadeIn, fadeOut } from 'react-navigation-transitions';
 import { Icon } from '../../components';
 import { colors, fonts } from '../../styles';
-import SplashScreenViewContainer from '../splashScreen/SplashScreenViewContainer';
 import AuthenticationViewContainer from '../authentication/AuthenticationViewContainer';
 import HomeScreenViewContainer from '../homeScreen/HomeScreenViewContainer';
 import MovieDetailViewContainer from '../movieDetail/MovieDetailViewContainer';
@@ -40,6 +39,7 @@ const stackNavigator = createStackNavigator(
     }
   },
   {
+    // initialRouteName: 'MoreItems',
     transitionConfig: (sceneProps) => {
       if (currentIndex < sceneProps.index) {
         currentIndex = sceneProps.index;

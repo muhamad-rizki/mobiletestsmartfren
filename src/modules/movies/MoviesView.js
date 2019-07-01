@@ -202,7 +202,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
-            onPress={() => goMoreItem('movie', 'popular_person')}
+            onPress={() => goMoreItem('person', 'popular')}
           />
         </View>
         <PopPersonList
