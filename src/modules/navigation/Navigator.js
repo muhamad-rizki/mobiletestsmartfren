@@ -14,20 +14,14 @@ let currentIndex = 0;
 
 const stackNavigator = createStackNavigator(
   {
-    SplashScreen: {
-      screen: SplashScreenViewContainer,
+    HomeScreen: {
+      screen: HomeScreenViewContainer,
       navigationOptions: {
         header: null,
       }
     },
     Authentication: {
       screen: AuthenticationViewContainer,
-      navigationOptions: {
-        header: null,
-      }
-    },
-    HomeScreen: {
-      screen: HomeScreenViewContainer,
       navigationOptions: {
         header: null,
       }

@@ -6,25 +6,29 @@ type ActionType = {
   payload?: any,
 };
 
-export const initialState: SplashScreenStateType = {};
+export const initialState: SplashScreenStateType = {
+  zIndex: 2,
+};
 
-export const ACTION = 'SplashScreenState/ACTION';
+export const SET_ZINDEX_VIEW = 'SplashScreenState/SET_ZINDEX_VIEW';
 
-export function actionCreator(): ActionType {
+export function setZIndexView(zIndex): ActionType {
   return {
-    type: ACTION,
+    type: SET_ZINDEX_VIEW,
+    payload: zIndex,
   };
 }
 
 export default function SplashScreenStateReducer(
   state: SplashScreenStateType = initialState,
-  action: ActionType,
+  action: ActionType
 ): SplashScreenStateType {
   switch (action.type) {
-    case ACTION:
-      return {
+    case SET_ZINDEX_VIEW:
+      return Object.assign({}, {
         ...state,
-      };
+        zIndex: action.payload,
+      });
     default:
       return state;
   }

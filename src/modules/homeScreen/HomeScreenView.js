@@ -12,6 +12,7 @@ import MoviesViewContainer from '../movies/MoviesViewContainer';
 import TvShowsViewContainer from '../tvShows/TvShowsViewContainer';
 import { WINDOW } from '../../env';
 import { colors } from '../../styles';
+import SplashScreenViewContainer from '../splashScreen/SplashScreenViewContainer';
 
 const AppIcon = require('../../../assets/images/icon.png');
 
@@ -28,59 +29,61 @@ export default (props: Props) => {
     changeIndex
   } = props;
   return (
-    <View flex>
-      <Header
-        icon={AppIcon}
-        rightComponent={(
-          <View flex style={{ alignItems: 'flex-end' }} centerV padding-16>
-            <Icon name="bell" type="Feather" size={24} color={colors.secondary} />
-          </View>
-        )}
-      />
+    <SplashScreenViewContainer>
       <View flex>
-        <TabView
-          swipeEnabled={false}
-          removeClippedSubviews
-          navigationState={props}
-          renderScene={SceneMapper}
-          onIndexChange={changeIndex}
-          initialLayout={{ width: WINDOW.width, height: 0 }}
-          tabBarPosition="bottom"
-          lazy
-          renderLazyPlaceholder={() => <View />}
-          renderTabBar={mProps => (
-            <TabBar
-              {...mProps}
-              renderIndicator={() => { }}
-              style={{
-                backgroundColor: colors.white,
-                borderTopWidth: 0.5,
-                borderTopColor: colors.lightGray,
-              }}
-              pressColor={colors.lightGray}
-              renderLabel={({ focused, route }) => (
-                <Text
-                  style={{
-                    color: focused ? colors.secondary : colors.lightGray,
-                    textTransform: 'uppercase',
-                    fontSize: 12,
-                  }}
-                >
-                  {route.title}
-                </Text>
-              )}
-              renderIcon={({ focused, route }) => (
-                <Icon
-                  size={24}
-                  color={focused ? colors.secondary : colors.grey}
-                  name={route.icon}
-                  type={route.iconType}
-                />
-              )}
-            />
+        <Header
+          icon={AppIcon}
+          rightComponent={(
+            <View flex style={{ alignItems: 'flex-end' }} centerV padding-16>
+              <Icon name="bell" type="Feather" size={24} color={colors.secondary} />
+            </View>
           )}
         />
+        <View flex>
+          <TabView
+            swipeEnabled={false}
+            removeClippedSubviews
+            navigationState={props}
+            renderScene={SceneMapper}
+            onIndexChange={changeIndex}
+            initialLayout={{ width: WINDOW.width, height: 0 }}
+            tabBarPosition="bottom"
+            lazy
+            renderLazyPlaceholder={() => <View />}
+            renderTabBar={mProps => (
+              <TabBar
+                {...mProps}
+                renderIndicator={() => { }}
+                style={{
+                  backgroundColor: colors.white,
+                  borderTopWidth: 0.5,
+                  borderTopColor: colors.lightGray,
+                }}
+                pressColor={colors.lightGray}
+                renderLabel={({ focused, route }) => (
+                  <Text
+                    style={{
+                      color: focused ? colors.secondary : colors.lightGray,
+                      textTransform: 'uppercase',
+                      fontSize: 12,
+                    }}
+                  >
+                    {route.title}
+                  </Text>
+                )}
+                renderIcon={({ focused, route }) => (
+                  <Icon
+                    size={24}
+                    color={focused ? colors.secondary : colors.grey}
+                    name={route.icon}
+                    type={route.iconType}
+                  />
+                )}
+              />
+            )}
+          />
+        </View>
       </View>
-    </View>
+    </SplashScreenViewContainer>
   );
 };
