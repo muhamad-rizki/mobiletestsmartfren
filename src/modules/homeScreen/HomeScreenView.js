@@ -5,6 +5,7 @@ import {
   Text,
 } from 'react-native-ui-lib';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import { withNavigation } from 'react-navigation';
 import { Header, Icon } from '../../components';
 import AuthenticationViewContainer from '../authentication/AuthenticationViewContainer';
 import MoviesViewContainer from '../movies/MoviesViewContainer';
@@ -17,9 +18,9 @@ const AppIcon = require('../../../assets/images/icon.png');
 type Props = {};
 
 const SceneMapper = SceneMap({
-  tvshows: TvShowsViewContainer,
-  movies: MoviesViewContainer,
-  account: AuthenticationViewContainer,
+  tvshows: withNavigation(TvShowsViewContainer),
+  movies: withNavigation(MoviesViewContainer),
+  account: withNavigation(AuthenticationViewContainer),
 });
 
 export default (props: Props) => {
