@@ -39,6 +39,7 @@ export default (props: Props) => {
     loadingTopRated,
     setTRLoading,
     tabIndex,
+    goDetail,
   } = props;
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -74,6 +75,7 @@ export default (props: Props) => {
           genres={genres}
           activeTabIndex={tabIndex}
           tabIndex={0}
+          onPress={goDetail}
         />
         <View
           padding-8
@@ -104,6 +106,7 @@ export default (props: Props) => {
           loadingPopular={loadingPopular}
           activeTabIndex={tabIndex}
           tabIndex={0}
+          onPress={goDetail}
         />
         <View
           padding-8
@@ -134,6 +137,7 @@ export default (props: Props) => {
           genres={genres}
           activeTabIndex={tabIndex}
           tabIndex={0}
+          onPress={goDetail}
         />
         <View
           padding-8
@@ -166,6 +170,7 @@ export default (props: Props) => {
           genres={genres}
           activeTabIndex={tabIndex}
           tabIndex={0}
+          onPress={goDetail}
         />
       </View>
     </ScrollView>
