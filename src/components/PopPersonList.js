@@ -58,7 +58,7 @@ const renderPopPerson = (data) => {
             >
               <Avatar
                 imageSource={{ uri: `${imgUrl}/w154/${item.profile_path}` }}
-                onImageLoadEnd={() => !forceLoading && setPPLoading(false)}
+                onImageLoadEnd={() => (loadingPopPerson || !forceLoading) && setPPLoading(false)}
                 size={50}
                 label={AvatarHelper.getInitials(item.name)}
                 labelColor={colors.secondary}
@@ -98,6 +98,22 @@ const renderPopPerson = (data) => {
   );
 };
 
+const emptyComponent = () => renderPopPerson({
+  item: {
+    genre_ids: [],
+    vote_average: 0,
+    vote_count: 0,
+    overview: '',
+  },
+  forceLoading: true,
+  imgUrl: 'https://image.tmdb.org/t/p/',
+  loadingPopPerson: true,
+});
+
+const keyExtractor = item => item.id.toString();
+
+let renderItem = null;
+
 export default (props: Props) => {
   const {
     popPerson,
@@ -107,35 +123,30 @@ export default (props: Props) => {
     genres,
     onPress,
   } = props;
+
+  if (!renderItem) {
+    renderItem = ({ item }) => renderPopPerson({
+      item,
+      loadingPopPerson,
+      setPPLoading,
+      imgUrl,
+      genres,
+      onPress,
+    });
+  }
+
   return (
     <FlatList
       contentContainerStyle={{ padding: 8 }}
       numColumns={2}
-      keyExtractor={item => item.id.toString()}
+      keyExtractor={keyExtractor}
       data={popPerson.results.slice(0, 6)}
       maxToRenderPerBatch={5}
       initialNumToRender={5}
       onEndReachedThreshold={0.5}
       windowSize={1}
-      renderItem={({ item }) => renderPopPerson({
-        item,
-        loadingPopPerson,
-        setPPLoading,
-        imgUrl,
-        genres,
-        onPress,
-      })}
-      ListEmptyComponent={() => renderPopPerson({
-        item: {
-          genre_ids: [],
-          vote_average: 0,
-          vote_count: 0,
-          overview: '',
-        },
-        forceLoading: true,
-        imgUrl,
-        loadingPopPerson: true,
-      })}
+      renderItem={renderItem}
+      ListEmptyComponent={emptyComponent}
     />
   );
 };

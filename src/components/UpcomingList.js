@@ -114,6 +114,7 @@ export default (props: Props) => {
     tabIndex,
     // onPress,
   } = props;
+
   return (
     <View>
       {

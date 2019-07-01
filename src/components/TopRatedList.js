@@ -42,7 +42,7 @@ const renderTopRated = (data) => {
         >
           <FastImage
             source={{ uri: `${imgUrl}/w92/${item.poster_path}` }}
-            onLoadEnd={() => !forceLoading && setTRLoading(false)}
+            onLoadEnd={() => (loadingTopRated || !forceLoading) && setTRLoading(false)}
             style={{
               width: 80,
               height: 130,
@@ -95,6 +95,22 @@ const renderTopRated = (data) => {
   );
 };
 
+const emptyComponent = () => renderTopRated({
+  item: {
+    genre_ids: [],
+    vote_average: 0,
+    vote_count: 0,
+    overview: '',
+  },
+  forceLoading: true,
+  imgUrl: 'https://image.tmdb.org/t/p/',
+  loadingTopRated: true,
+});
+
+const keyExtractor = item => item.id.toString();
+
+let renderItem = null;
+
 export default (props: Props) => {
   const {
     topRated,
@@ -104,33 +120,28 @@ export default (props: Props) => {
     genres,
     onPress,
   } = props;
+
+  if (!renderItem) {
+    renderItem = ({ item }) => renderTopRated({
+      item,
+      loadingTopRated,
+      setTRLoading,
+      imgUrl,
+      genres,
+      onPress,
+    });
+  }
+
   return (
     <FlatList
-      keyExtractor={item => item.id.toString()}
+      keyExtractor={keyExtractor}
       data={topRated.results.slice(0, 3)}
-      renderItem={({ item }) => renderTopRated({
-        item,
-        loadingTopRated,
-        setTRLoading,
-        imgUrl,
-        genres,
-        onPress,
-      })}
+      renderItem={renderItem}
       maxToRenderPerBatch={5}
       initialNumToRender={5}
       onEndReachedThreshold={0.5}
       windowSize={1}
-      ListEmptyComponent={() => renderTopRated({
-        item: {
-          genre_ids: [],
-          vote_average: 0,
-          vote_count: 0,
-          overview: '',
-        },
-        forceLoading: true,
-        imgUrl,
-        loadingTopRated: true,
-      })}
+      ListEmptyComponent={emptyComponent}
     />
   );
 };

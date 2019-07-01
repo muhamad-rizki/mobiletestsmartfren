@@ -63,7 +63,7 @@ const renderPopular = (data) => {
           style={{ alignSelf: 'center' }}
         >
           <FastImage
-            onLoadEnd={() => setPopLoading(false)}
+            onLoadEnd={() => loadingPopular && setPopLoading(false)}
             style={{
               width: 100,
               height: 150,
@@ -101,6 +101,7 @@ export default (props: Props) => {
     tabIndex,
     activeTabIndex,
   } = props;
+
   if (popular.results.length > 1) {
     return (
       <View style={{ height: 150 }}>

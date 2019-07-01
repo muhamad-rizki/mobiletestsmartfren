@@ -47,7 +47,7 @@ const renderNowPlaying = (data) => {
           style={{ alignSelf: 'center' }}
         >
           <FastImage
-            onLoadEnd={() => setNPLoading(false)}
+            onLoadEnd={() => loadingNowPlaying && setNPLoading(false)}
             style={{
               width: 150,
               height: 250,
@@ -87,6 +87,7 @@ export default (props: Props) => {
     activeTabIndex,
     tabIndex,
   } = props;
+
   return (
     <View>
       <View style={{ height: 250 }}>
