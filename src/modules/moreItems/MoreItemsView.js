@@ -1,4 +1,5 @@
 // @flow
+import _ from 'lodash';
 import React from 'react';
 import {
   View,
@@ -159,6 +160,23 @@ export default (props: Props) => {
           )}
         />
         <FlatList
+          ListHeaderComponent={dataList.length > 0
+            ? () => (
+              <View
+                style={{
+                  width: '100%',
+                  backgroundColor: colors.green,
+                }}
+                paddingH-12
+                paddingV-16
+                marginB-8
+              >
+                <Text>
+                  {`Showing list of ${_.startCase(_.toLower(kind.split('_').join(' ')))} ${type === 'tv' ? 'TV Show' : 'Movie'}`}
+                </Text>
+              </View>
+            )
+            : undefined}
           contentContainerStyle={[
             { paddingVertical: 8 },
             dataList.length <= 0 ? { flex: 1 } : {}
