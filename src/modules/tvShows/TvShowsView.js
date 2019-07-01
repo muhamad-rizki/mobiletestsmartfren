@@ -130,7 +130,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
-            onPress={() => goMoreItem('movie', 'top_rated')}
+            onPress={() => goMoreItem('tv', 'top_rated')}
           />
         </View>
         <TopRatedList
@@ -162,7 +162,7 @@ export default (props: Props) => {
             size="xSmall"
             color="#fff"
             backgroundColor="#000"
-            onPress={() => goMoreItem('movie', 'airing_today')}
+            onPress={() => goMoreItem('tv', 'airing_today')}
           />
         </View>
         <UpcomingList
