@@ -1,3 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Component renders as expected 1`] = `ShallowWrapper {}`;
+exports[`Header Component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomColor": "#9b9b9b",
+      "borderBottomWidth": 0.5,
+      "flexDirection": "row",
+      "height": 60,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 60,
+          "padding": 12,
+          "width": 60,
+        }
+      }
+    >
+      <Image
+        style={
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      LayarKaca21
+    </Text>
+  </View>
+</View>
+`;

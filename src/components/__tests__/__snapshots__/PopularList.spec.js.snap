@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PopularList Component renders as expected 1`] = `ShallowWrapper {}`;
+exports[`PopularList Component renders as expected 1`] = `
+<ShimmerPlaceHolder
+  autoRun={true}
+  backgroundColorBehindBorder="white"
+  colorShimmer={
+    Array [
+      "#ebebeb",
+      "#c5c5c5",
+      "#ebebeb",
+    ]
+  }
+  delay={0}
+  duration={1000}
+  hasBorder={false}
+  height={150}
+  isInteraction={true}
+  location={
+    Array [
+      0.3,
+      0.5,
+      0.7,
+    ]
+  }
+  reverse={false}
+  style={
+    Object {
+      "alignSelf": "center",
+    }
+  }
+  visible={false}
+  width={750}
+  widthShimmer={1}
+/>
+`;
 
-exports[`PopularList Component renders as expected with at least one item 1`] = `ShallowWrapper {}`;
+exports[`PopularList Component renders as expected with at least one item 1`] = `
+<ShimmerPlaceHolder
+  autoRun={true}
+  backgroundColorBehindBorder="white"
+  colorShimmer={
+    Array [
+      "#ebebeb",
+      "#c5c5c5",
+      "#ebebeb",
+    ]
+  }
+  delay={0}
+  duration={1000}
+  hasBorder={false}
+  height={150}
+  isInteraction={true}
+  location={
+    Array [
+      0.3,
+      0.5,
+      0.7,
+    ]
+  }
+  reverse={false}
+  style={
+    Object {
+      "alignSelf": "center",
+    }
+  }
+  visible={true}
+  width={750}
+  widthShimmer={1}
+/>
+`;

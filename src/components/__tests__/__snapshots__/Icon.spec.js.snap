@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon Component renders as expected 1`] = `ShallowWrapper {}`;
+exports[`Icon Component renders as expected 1`] = `
+<Icon
+  allowFontScaling={false}
+  color="#666"
+  name="mobile"
+  size={12}
+  style={Object {}}
+/>
+`;

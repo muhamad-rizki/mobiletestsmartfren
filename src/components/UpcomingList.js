@@ -118,7 +118,7 @@ export default (props: Props) => {
   return (
     <View>
       {
-        upcoming.results.length > 1
+        upcoming.results.length > 0
           ? (
             <Carousel
               data={upcoming.results.slice(0, 10)}

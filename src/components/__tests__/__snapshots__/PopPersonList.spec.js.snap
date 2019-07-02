@@ -1,5 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PopPersonList Component renders as expected 1`] = `ShallowWrapper {}`;
+exports[`PopPersonList Component renders as expected 1`] = `
+<ForwardRef
+  ListEmptyComponent={[Function]}
+  contentContainerStyle={
+    Object {
+      "padding": 8,
+    }
+  }
+  data={Array []}
+  initialNumToRender={5}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={5}
+  numColumns={2}
+  onEndReachedThreshold={0.5}
+  pinchGestureEnabled={false}
+  renderItem={[Function]}
+  scrollEnabled={false}
+  windowSize={1}
+/>
+`;
 
-exports[`PopPersonList Component renders as expected with at least one item 1`] = `ShallowWrapper {}`;
+exports[`PopPersonList Component renders as expected with at least one item 1`] = `
+<ForwardRef
+  ListEmptyComponent={[Function]}
+  contentContainerStyle={
+    Object {
+      "padding": 8,
+    }
+  }
+  data={
+    Array [
+      Object {
+        "results": Array [
+          Object {
+            "adult": false,
+            "backdrop_path": "/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+            "genre_ids": Array [
+              12,
+            ],
+            "id": 420817,
+            "original_language": "en",
+            "original_title": "Aladdin",
+            "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground 'fight clubs' forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+            "popularity": 128.906,
+            "poster_path": "/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg",
+            "release_date": "2019-05-22",
+            "title": "Aladdin",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 1950,
+          },
+        ],
+      },
+    ]
+  }
+  initialNumToRender={5}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={5}
+  numColumns={2}
+  onEndReachedThreshold={0.5}
+  pinchGestureEnabled={false}
+  renderItem={[Function]}
+  scrollEnabled={false}
+  windowSize={1}
+/>
+`;

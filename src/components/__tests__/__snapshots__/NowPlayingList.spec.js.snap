@@ -1,5 +1,297 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NowPlayingList Component renders as expected 1`] = `ShallowWrapper {}`;
+exports[`NowPlayingList Component renders as expected 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 250,
+      }
+    }
+  >
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={250}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+      visible={false}
+      width={150}
+      widthShimmer={1}
+    />
+  </View>
+  <View
+    center={true}
+    padding-16={true}
+  >
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={15}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      visible={false}
+      width={200}
+      widthShimmer={1}
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          bold={true}
+          h2={true}
+        />
+        <StarRatingBar
+          accurateHalfStars={true}
+          allowsHalfStars={true}
+          dontShowScore={true}
+          maximumValue={1}
+          minimumValue={0}
+          readOnly={true}
+          score=""
+          scoreText="分"
+          scoreTextStyle={
+            Object {
+              "color": "#ffb819",
+              "marginLeft": 10,
+            }
+          }
+          spacing={10}
+          value={0}
+          valueToFix={1}
+        />
+        <Text
+          bold={true}
+          h2={true}
+        />
+      </View>
+    </ShimmerPlaceHolder>
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={15}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      visible={false}
+      width={200}
+      widthShimmer={1}
+    >
+      <Text
+        h3={true}
+        lightGray={true}
+      />
+    </ShimmerPlaceHolder>
+  </View>
+</View>
+`;
 
-exports[`NowPlayingList Component renders as expected with at least one item 1`] = `ShallowWrapper {}`;
+exports[`NowPlayingList Component renders as expected with at least one item 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "height": 250,
+      }
+    }
+  >
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={250}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+      visible={true}
+      width={150}
+      widthShimmer={1}
+    />
+  </View>
+  <View
+    center={true}
+    padding-16={true}
+  >
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={15}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      visible={true}
+      width={200}
+      widthShimmer={1}
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          bold={true}
+          h2={true}
+        >
+          Aladdin • 
+        </Text>
+        <StarRatingBar
+          accurateHalfStars={true}
+          allowsHalfStars={true}
+          dontShowScore={true}
+          maximumValue={1}
+          minimumValue={0}
+          readOnly={true}
+          score={0.72}
+          scoreText="分"
+          scoreTextStyle={
+            Object {
+              "color": "#ffb819",
+              "marginLeft": 10,
+            }
+          }
+          spacing={10}
+          value={0}
+          valueToFix={1}
+        />
+        <Text
+          bold={true}
+          h2={true}
+        >
+          7.2
+        </Text>
+      </View>
+    </ShimmerPlaceHolder>
+    <ShimmerPlaceHolder
+      autoRun={true}
+      backgroundColorBehindBorder="white"
+      colorShimmer={
+        Array [
+          "#ebebeb",
+          "#c5c5c5",
+          "#ebebeb",
+        ]
+      }
+      delay={0}
+      duration={1000}
+      hasBorder={false}
+      height={15}
+      isInteraction={true}
+      location={
+        Array [
+          0.3,
+          0.5,
+          0.7,
+        ]
+      }
+      reverse={false}
+      visible={true}
+      width={200}
+      widthShimmer={1}
+    >
+      <Text
+        h3={true}
+        lightGray={true}
+      >
+        Drama
+      </Text>
+    </ShimmerPlaceHolder>
+  </View>
+</View>
+`;
