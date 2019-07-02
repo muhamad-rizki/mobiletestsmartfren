@@ -55,6 +55,7 @@ export default compose(
           });
       },
       clearList: () => dispatch(setMoreList(false, [])),
+      onPress: item => navigation.navigate({ routeName: 'MovieDetail', params: { item } }),
     }),
   ),
   lifecycle({

@@ -76,7 +76,6 @@ const renderItem = (data) => {
         </View>
         <TouchableWithoutFeedback
           onPress={() => onPress && onPress(item)}
-          disabled={!loaded}
         >
           <Text>
             {
