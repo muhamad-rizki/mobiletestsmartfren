@@ -118,6 +118,8 @@ export default (props: Props) => {
             alignItems: 'center'
           }}
           loop
+          loopClonesPerSide={10}
+          windSize={10}
           activeSlideAlignment="start"
           inactiveSlideOpacity={1}
           inactiveSlideScale={1}

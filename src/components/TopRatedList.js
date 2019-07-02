@@ -142,6 +142,8 @@ export default (props: Props) => {
       initialNumToRender={5}
       onEndReachedThreshold={0.5}
       windowSize={1}
+      scrollEnabled={false}
+      pinchGestureEnabled={false}
       ListEmptyComponent={emptyComponent}
     />
   );

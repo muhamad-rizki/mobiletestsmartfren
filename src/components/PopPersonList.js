@@ -148,6 +148,8 @@ export default (props: Props) => {
       windowSize={1}
       renderItem={renderItem}
       ListEmptyComponent={emptyComponent}
+      scrollEnabled={false}
+      pinchGestureEnabled={false}
     />
   );
 };
