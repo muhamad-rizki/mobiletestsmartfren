@@ -35,7 +35,7 @@ or if using npm:
 `npm install`
 - Run the apps on Android emulator or real device using command:
 `react-native run-android`
-- or download compiled release apk on this repository, then install it on emulator or real device.
+- or download compiled release apk on this repository, then install it on emulator or real device. https://github.com/muhamad-rizki/mobiletestsmartfren/tree/smartfrentest/release
 
 Running Test
 ------------
