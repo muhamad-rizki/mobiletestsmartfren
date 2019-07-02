@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PopPersonList Component renders as expected 1`] = `ShallowWrapper {}`;
+
+exports[`PopPersonList Component renders as expected with at least one item 1`] = `ShallowWrapper {}`;
