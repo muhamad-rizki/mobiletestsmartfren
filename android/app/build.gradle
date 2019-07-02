@@ -127,21 +127,12 @@ android {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
-  signingConfigs {
-      config {
-          keyAlias 'stiamimobile'
-          keyPassword 'stiamimobile123@!'
-          storeFile file('../stiamimobile123@!.jks')
-          storePassword 'stiamimobile123@!'
-      }
-  }
   defaultConfig {
     applicationId packageName
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode googleVer
     versionName userVer
-    signingConfig signingConfigs.config
     missingDimensionStrategy 'react-native-camera', 'general'
     renderscriptTargetApi 19
     renderscriptSupportModeEnabled true
