@@ -30,7 +30,6 @@ const renderPopPerson = (data) => {
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => onPress && onPress(item)}
-        disabled={forceLoading || loadingPopPerson}
       >
         <View
           style={{

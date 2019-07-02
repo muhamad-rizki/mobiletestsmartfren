@@ -39,7 +39,7 @@ const stackNavigator = createStackNavigator(
     }
   },
   {
-    // initialRouteName: 'MoreItems',
+    // initialRouteName: 'MovieDetail',
     transitionConfig: (sceneProps) => {
       if (currentIndex < sceneProps.index) {
         currentIndex = sceneProps.index;

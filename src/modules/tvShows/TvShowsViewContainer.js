@@ -106,7 +106,7 @@ export default compose(
       setUCLoading: show => dispatch({ type: ACTION_AIRINGTODAY_SET_LOADING, payload: show }),
       setUCIndex: index => dispatch({ type: ACTION_AIRINGTODAY_SET_INDEX, payload: index }),
       setTRLoading: show => dispatch({ type: ACTION_TOPRATED_SET_LOADING, payload: show }),
-      goDetail: item => navigation.navigate({ routeName: 'MovieDetail', params: item }),
+      goDetail: item => navigation.navigate({ routeName: 'MovieDetail', params: { item } }),
       goMoreItem: (type, kind) => navigation.navigate({ routeName: 'MoreItems', params: { type, kind } }),
     }),
   ),

@@ -79,7 +79,6 @@ const renderTopRated = (data) => {
           </View>
           <TouchableWithoutFeedback
             onPress={() => onPress && onPress(item)}
-            disabled={loadingTopRated}
           >
             <Text>
               {`${isEmpty(item.overview, 'This movie doesn\'t have any description').substring(0, 80)} ... `}
